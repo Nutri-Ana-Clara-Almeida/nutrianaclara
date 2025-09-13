@@ -1,0 +1,866 @@
+/* ====== ESTILOS GERAIS ====== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e9e4d9;
+    color: black;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0 0 10px 0;
+    line-height: 1.5;
+}
+
+/* BOTÕES */
+.cta-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #25D366;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.cta-btn:hover {
+    background-color: #1DA851;
+}
+
+/* Chat flutuante */
+.chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+}
+
+/* Botão do chat */
+.chat-btn {
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.chat-btn:hover {
+    transform: scale(1.1);
+}
+
+
+/* Rodapé principal */
+
+.rodape {
+  width: 100%;
+  padding: 20px 15px; /* mais compacto verticalmente */
+  background-color: #e9e4d9; 
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 -1px 8px rgba(0,0,0,0.05); /* sombra leve */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+/* Container interno */
+.rodape-container {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Nomes e assinaturas */
+.rodape-nomes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 14px; /* fonte menor */
+  color: #333;
+  margin-bottom: 6px; /* menos espaço */
+}
+
+.rodape-nomes .assinatura {
+  font-weight: 600;
+}
+
+.rodape-nomes .profissional {
+  font-style: italic;
+  color: #555;
+}
+
+
+/* Direitos autorais */
+.rodape-direitos {
+  margin-top: 6px;
+  font-size: 12px; /* menor e mais discreto */
+  color: #999;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .rodape-nomes {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .rodape-contato {
+    gap: 8px;
+  }
+}
+
+
+/* ====== BARRA DE NAVEGAÇÃO ====== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 40px;
+    background-color: #e9e4d9;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #4e342e;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #25D366;
+}
+
+.social-icons a i {
+    font-size: 24px;
+    color: #633414
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    .nav-links {
+        margin: 10px 0;
+    }
+    .nav-links a {
+        margin: 5px 10px;
+    }
+    .social-icons {
+        margin-top: 10px;
+    }
+}
+
+/* ======================== */
+/* DIVISÓRIA VERDE FININHA */
+/* ======================== */
+.divisoria-profissional {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* centraliza as linhas */
+    margin: 4rem 0; /* espaço acima e abaixo */
+}
+
+.divisoria-profissional .decor {
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #D4AF37; /* dourado elegante */
+    margin: 0 5px;
+    border-radius: 1px;
+}
+
+
+/* ====== PERFIL PROFISSIONAL COM FUNDO ORIGINAL ====== */
+.perfil-widget {
+    width: 100vw;               /* ocupa toda a largura da tela */
+    padding: 100px 0;           /* padding só em cima e embaixo */
+    background: url('capa_01.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;     /* inclui padding na largura */
+    margin: 0;                  /* remove margens externas */
+}
+
+.perfil-container {
+    display: flex;
+    max-width: 1200px;          /* mantém limite no desktop */
+    width: 100%;
+    gap: 60px;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 10px;            /* evita que o conteúdo encoste nas laterais no celular */
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.perfil-texto {
+    flex: 1;
+    color: #fff;
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    line-height: 1.7;
+    text-align: left;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.35);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.perfil-texto h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #FFD700;
+}
+
+.perfil-texto p {
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+}
+
+.perfil-texto .frase-destaque {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #F0E68C;
+}
+
+.perfil-texto:hover {
+    transform: translateY(-5px);
+}
+
+/* Ajuste do texto para celular */
+@media screen and (max-width: 768px) {
+    .perfil-texto {
+        text-align: center;  /* centraliza o texto */
+        padding: 20px 10px;  /* dá espaço interno confortável */
+    }
+}
+
+/* Ajuste da foto do perfil */
+.perfil-foto {
+    flex-shrink: 0;
+    width: 280px;      /* largura maior */
+    height: 280px;     /* altura igual para manter proporção */
+}
+
+.perfil-foto img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* totalmente redonda */
+    object-fit: cover;
+    border: 4px solid #fff; /* opcional, deixa destaque */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.perfil-foto img:hover {
+    transform: scale(1.08);
+}
+
+/* Ajustes para celular */
+@media (max-width: 768px) {
+    .perfil-container {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;             /* ocupa toda a largura da tela */
+        padding: 0 10px;         /* remove espaço nas laterais */
+        box-sizing: border-box;
+    }
+
+    .perfil-foto {
+        width: 200px;
+        height: 200px;
+    }
+
+    .perfil-texto {
+        text-align: center;      /* centraliza o texto no celular */
+    }
+}
+
+/* ====== QUEM EU SOU ====== */
+
+    .quem-eu-sou {
+        padding: 4rem 2rem;
+        background-color: #e9e4d9;
+        text-align: center;
+    }
+    .quem-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        max-width: 1200px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+    .quem-texto {
+        max-width: 500px;
+        text-align: left;
+
+    }
+    .quem-texto h1 {
+        color: #633414;
+        margin-bottom: 2rem;
+        
+        
+    }
+    .quem-foto img {
+        border-radius: 12px;
+        width: 300px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .divisoria {
+        border-top: 3px solid #633414;
+        margin: 2rem auto;
+        width: 80%;
+        
+    }
+    .galeria-texto h3 {
+        margin-bottom: 2rem;
+        color: #633414;
+        font-size: 1.5rem;
+    }
+    .galeria-imagens {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+    .galeria-item img {
+        border-radius: 12px;
+        width: 250px;
+        height: 200px;
+        object-fit: cover;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+
+/* ===== CALCULADORA IMC – Ajustes leves ===== */
+.calculadora-imc {
+    padding: 2rem 2rem; /* mais espaçamento vertical */
+    background-color: #fff; /* fundo suave que destaca */
+    border-radius: 12px;
+    max-width: 700px;
+    margin: 2rem auto 4rem; /* centraliza e adiciona espaço em cima e embaixo */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.calculadora-imc h2 {
+    color: #633414;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.imc-widget {
+    display: flex;
+    justify-content: center;
+    gap: 3rem; /* aumenta o espaçamento entre campos */
+    flex-wrap: wrap;
+}
+
+#imcForm input {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#imcForm button {
+    background-color: #8B5E3C; /* cor combinando com o site */
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#imcForm button:hover {
+    background-color: #733f1e;
+}
+
+.imc-resultado {
+    width: 300px;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #633414;
+}
+
+/* ===== Ajuste leve nos cards ===== */
+.cards {
+    gap: 2rem; /* mantém espaçamento entre cards */
+}
+
+.card {
+    transition: transform 0.2s ease; /* mantém efeito hover sem quebrar layout */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== Seção: Do que você precisa ===== */
+.o-que-voce-precisa {
+    padding: rem 2rem;
+    background-color: #e9e4d9; /* Cor mais suave para destacar os cards */
+    text-align: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.o-que-voce-precisa h2 {
+    color: #633414;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+
+/* ====== SEÇÃO: DO QUE VOCÊ PRECISA ====== */
+.o-que-voce-precisa {
+    padding: 2rem 1rem;
+    background-color: #e9e4d9;
+    text-align: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.o-que-voce-precisa h2 {
+    color: #633414;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+/* ===== Cards ===== */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: auto;         /* mantém proporção da imagem */
+    max-height: 220px;    /* limita tamanho máximo */
+    object-fit: contain;  /* não corta a imagem */
+    border-radius: 12px 12px 0 0;
+}
+
+.card h3 {
+    margin: 10px 0 5px 0;
+    color: #633414;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.card p {
+    margin: 0 10px 15px 10px;
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .card {
+        width: 90%;
+        max-width: 300px;
+    }
+    .card img {
+        max-height: 180px;
+    }
+}
+
+/* Carrossel 1*/
+.galeria-carrossel-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.galeria-titulo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #633414;
+  margin-bottom: 30px;
+}
+
+.galeria-carrossel {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;      /* empilha no mobile */
+  justify-content: center;
+}
+
+.carrossel-wrapper {
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.galeria-carrossel {
+  display: flex;
+  gap: 20px;         /* espaçamento entre os carrosséis */
+  flex-wrap: wrap;    /* para mobile, os carrosséis empilham */
+  justify-content: center;
+}
+
+.carrossel-wrapper {
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.carrossel {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 25px;
+  background: transparent;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+/* Cada slide */
+.slide {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Imagem dentro do slide - cantos arredondados */
+.slide img {
+  width: 100%;            /* ocupa toda a largura do slide */
+  height: 100%;           /* ocupa toda a altura do slide */
+  object-fit: cover;      /* mantém a proporção e cobre todo o slide */
+  border-radius: 50px;    /* cantos arredondados */
+  display: block;
+}
+
+.bolinhas {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.bolinha {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.bolinha.active {
+  background: #633414;
+}
+
+@media (max-width: 800px) {
+  .galeria-carrossel {
+    flex-direction: column;  /* empilha no mobile */
+  }
+}
+
+/* Container do carrossel 2 */
+.carrossel-container {
+  max-width: 290px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.carrossel-titulo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #633414;
+  margin-bottom: 20px;
+}
+
+.carrossel {
+  width: 100%;
+  height: 370px;
+  overflow: hidden;
+  border-radius: 25px;       /* cantos arredondados */
+  margin: 0 auto;
+  position: relative;
+  background: transparent;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  height: 100%;
+}
+
+.slide {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;               /* ocupa toda largura do slide */
+  height: 90%;              /* ocupa toda altura do slide */
+  object-fit: cover;         /* mantém a proporção, sem cortar cantos */
+  border-radius: 25px;       /* cantos arredondados */
+  display: block;
+}
+
+/* Bolinhas de navegação */
+.bolinhas {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.bolinha {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.bolinha.active {
+  background: #633414;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .carrossel {
+    height: 250px;
+  }
+}
+
+
+
+/* Container geral do formulário */
+/* ====== PÁGINA ====== */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* ====== CONTAINER PRINCIPAL ====== */
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* garante altura total da tela */
+}
+
+
+/* ====== FORMULÁRIO CENTRALIZADO ====== */
+.form-wrapper {
+    flex: 1; /* ocupa espaço restante */
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+    padding: 20px;
+    background: #e9e4d9; /* cor de fundo opcional */
+}
+
+.form-container-final h2 {
+    font-size: 1.5rem;
+    color: #633414;
+    font-weight: bold;
+    margin-bottom: 1rem;  /* espaço abaixo do título */
+}
+
+.form-container-final {
+    max-width: 550px;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* ====== CAMPOS DO FORMULÁRIO ====== */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.7rem 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background: #f9f9f9;
+    font-size: 1rem;
+    margin-bottom: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #30965c;
+    background: #fff;
+    box-shadow: 0 0 8px rgba(48, 150, 92, 0.2);
+}
+
+/* ====== BOTÃO ====== */
+.btn-enviar-final {
+    width: 100%;
+    padding: 1.2rem;
+    background-color: #633414;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(48, 150, 92, 0.3);
+}
+
+.btn-enviar-final:hover {
+    background-color: #257a46;
+    box-shadow: 0 8px 20px rgba(48, 150, 92, 0.4);
+    transform: translateY(-2px);
+}
+
+/* ====== FEEDBACKS ====== */
+/* Seção de Feedbacks */
+.feedbacks {
+    padding: 60px 20px;
+    background: #e9e4d9;
+    text-align: center;
+}
+
+.feedbacks h2 {
+    font-size: 2rem;
+    color: #30965c;
+    margin-bottom: 10px;
+}
+
+.feedbacks p.intro {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Container de cards lado a lado */
+.feedbacks-container {
+    display: flex;
+    flex-wrap: wrap;       /* Permite quebrar para linhas em telas menores */
+    justify-content: center;
+    gap: 30px;             /* Espaçamento entre os cards */
+}
+
+/* Cada card */
+.feedback-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    width: 250px;
+    padding: 30px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* centraliza foto e conteúdo */
+    transition: transform 0.3s ease;
+}
+
+.feedback-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Foto redonda */
+.feedback-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #30965c;
+
+}
+
+/* Conteúdo do feedback */
+.feedback-info {
+    text-align: center;
+}
+
+.feedback-info p {
+    font-size: 0.95rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feedback-info span {
+    font-weight: bold;
+    color: #30965c;
+}
