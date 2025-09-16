@@ -146,89 +146,85 @@ p {
     border-radius: 1px;
 }
 
+/* ====== PERFIL PROFISSIONAL ====== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Lora:wght@400;600&display=swap');
 
-/* ====== PERFIL PROFISSIONAL COM FUNDO ORIGINAL ====== */
 .perfil-widget {
-    width: 100vw;               /* ocupa toda a largura da tela */
-    padding: 100px 0;           /* padding só em cima e embaixo */
+    width: 100vw;
+    padding: 100px 0;
     background: url('capa_01.jpg') no-repeat center center;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    box-sizing: border-box;     /* inclui padding na largura */
-    margin: 0;                  /* remove margens externas */
+    box-sizing: border-box;
+    margin: 0;
 }
 
 .perfil-container {
     display: flex;
-    max-width: 1200px;          /* mantém limite no desktop */
+    max-width: 1200px;
     width: 100%;
     gap: 60px;
     flex-wrap: wrap;
     align-items: center;
-    padding: 0 10px;            /* evita que o conteúdo encoste nas laterais no celular */
+    padding: 0 10px;
     margin: 0 auto;
     box-sizing: border-box;
 }
 
+/* ====== TEXTO ====== */
 .perfil-texto {
     flex: 1;
     color: #fff;
-    font-family: 'Montserrat', 'Arial', sans-serif;
-    line-height: 1.7;
+    font-family: 'Poppins', 'Arial', sans-serif; /* fonte mais clean e moderna */
+    line-height: 1.8;
     text-align: left;
     padding: 20px;
-    background-color: rgba(0,0,0,0.35);
+    background-color: rgba(0, 0, 0, 0.35);
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
     transition: transform 0.3s ease;
 }
 
 .perfil-texto h1 {
-    font-size: 2.5rem;
-    font-weight: 500;
-    margin-bottom: 15px;
-    color: #FFD700;
+    font-family: 'Lora', serif;   /* título com um toque elegante */
+    font-size: 3rem;
+    font-weight: 200;
+    margin-bottom: 10px;
+    color: #fff;              
 }
 
 .perfil-texto p {
-    font-size: 1.05rem;
-    margin-bottom: 12px;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: 200;
 }
 
 .perfil-texto .frase-destaque {
-    font-size: 1.3rem;
-    font-weight: 500;
-    color: #F0E68C;
+    font-size: 1.0rem;
+    font-weight: 100;
+    color: #fff;
 }
 
 .perfil-texto:hover {
     transform: translateY(-5px);
 }
 
-/* Ajuste do texto para celular */
-@media screen and (max-width: 768px) {
-    .perfil-texto {
-        text-align: center;  /* centraliza o texto */
-        padding: 20px 10px;  /* dá espaço interno confortável */
-    }
-}
-
-/* Ajuste da foto do perfil */
+/* ====== FOTO DO PERFIL ====== */
 .perfil-foto {
     flex-shrink: 0;
-    width: 300px;      /* largura maior */
-    height: 350px;     /* altura igual para manter proporção */
+    width: 300px;
+    height: 350px;
 }
 
 .perfil-foto img {
     width: 100%;
     height: 100%;
-    border-radius: 50%; /* totalmente redonda */
+    border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #fff; /* opcional, deixa destaque */
+    border: 4px solid #fff;
     box-shadow: 0 8px 25px rgba(0,0,0,0.3);
     transition: transform 0.3s ease;
 }
@@ -237,14 +233,13 @@ p {
     transform: scale(1.08);
 }
 
-/* Ajustes para celular */
+/* ====== RESPONSIVIDADE ====== */
 @media (max-width: 768px) {
     .perfil-container {
         flex-direction: column;
-        gap: 20px;
-        width: 100%;             /* ocupa toda a largura da tela */
-        padding: 0 10px;         /* remove espaço nas laterais */
-        box-sizing: border-box;
+        gap: 25px;
+        width: 100%;
+        padding: 0 12px;
     }
 
     .perfil-foto {
@@ -253,9 +248,32 @@ p {
     }
 
     .perfil-texto {
-        text-align: center;      /* centraliza o texto no celular */
+        text-align: center;
+        padding: 20px 12px;
+    }
+
+    .perfil-widget {
+        background-position: center top;  /* mostra mais do detalhe da imagem */
+        padding: 70px 0;
     }
 }
+
+@media (max-width: 480px) {
+    .perfil-widget {
+        background-image: url('capa_01_mobile.jpg'); /* versão otimizada para celular */
+        background-position: center;
+        padding: 60px 0;
+    }
+
+    .perfil-texto h1 {
+        font-size: 2rem;
+    }
+
+    .perfil-texto p {
+        font-size: 1rem;
+    }
+}
+
 
 /* ====== QUEM EU SOU ====== */
 
@@ -712,4 +730,23 @@ body, html {
 .feedback-info span {
     font-weight: bold;
     color: #633414;
+}
+
+.estrelas {
+    display: flex;
+    justify-content: center;      /* centraliza as estrelas */
+    gap: 4px;                     /* espaçamento uniforme */
+    margin-top: 0.5rem;           /* espaço entre texto e estrelas */
+}
+
+.estrelas span {
+    font-size: 1.5rem;            /* tamanho elegante */
+    color: #FFD700;               /* amarelo dourado profissional */
+    transition: transform 0.2s;   /* animação suave */
+}
+
+/* efeito hover opcional */
+.estrelas span:hover {
+    transform: scale(1.2);        /* cresce levemente ao passar o mouse */
+    cursor: pointer;
 }
