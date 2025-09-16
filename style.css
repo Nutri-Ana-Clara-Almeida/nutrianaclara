@@ -238,7 +238,9 @@ p {
     transform: translateY(-5px);
 }
 
-/* ====== RESPONSIVIDADE SOMENTE MOBILE (TABLETS) ====== */
+
+
+/* ====== RESPONSIVIDADE SOMENTE MOBILE (tablets) ====== */
 @media (max-width: 768px) {
     .perfil-widget {
         padding: 40px 0;
@@ -279,7 +281,7 @@ p {
     }
 }
 
-/* ====== RESPONSIVIDADE SOMENTE MOBILE (CELULARES PEQUENOS) ====== */
+/* ====== RESPONSIVIDADE SOMENTE MOBILE (celulares pequenos) ====== */
 @media (max-width: 480px) {
     .perfil-widget {
         padding: 50px 0;
@@ -293,11 +295,6 @@ p {
         height: 180px;
     }
 
-    .perfil-texto {
-        padding: 12px 8px;
-        line-height: 1.5;
-    }
-
     .perfil-texto h1 {
         font-size: 1.8rem;
     }
@@ -307,7 +304,6 @@ p {
         font-size: 0.95rem;
     }
 }
-
 
 
 /* ====== QUEM EU SOU ====== */
