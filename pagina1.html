@@ -114,7 +114,7 @@ textarea {
 .btn-enviar {
     width: 100%;
     padding: 12px;
-    background-color: #25D366;
+    background-color: #633414;
     color: white;
     border: none;
     border-radius: 10px;
@@ -125,7 +125,7 @@ textarea {
 }
 
 .btn-enviar:hover {
-    background-color: #1ebe5d;
+    background-color: #633414;
     box-shadow: 0 5px 12px rgba(0,0,0,0.12);
 }
 
@@ -177,8 +177,8 @@ textarea {
                 <option value="" disabled selected>Selecione...</option>
                 <option>Emagrecimento</option>
                 <option>Ganho de massa </option>
-                <option>Melhorar a saúde</option>
-                <option>Manter o peso</option>
+                <option>Melhorar saúde</option>
+                <option>Manter peso</option>
                 <option>Mais informações</option>
                 <option>Outros</option>
             </select>
@@ -190,6 +190,7 @@ textarea {
     </form>
 </section>
 
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("consultaForm");
@@ -197,25 +198,27 @@ document.addEventListener("DOMContentLoaded", function() {
     form.addEventListener("submit", function(e) {
         e.preventDefault();
 
-        const numeroWhatsApp = "5521993111831";
+        const numeroWhatsApp = "5521993111831"; // número do nutricionista
         const nome = document.getElementById("nome").value.trim();
         const telefone = document.getElementById("telefone").value.trim();
         const objetivo = document.getElementById("objetivo").value;
-        const duvidas = document.getElementById("duvidas").value.trim();
 
         if (!nome || !telefone || !objetivo) {
             alert("Preencha os campos obrigatórios.");
             return;
         }
 
+        // Monta a mensagem
         const mensagem = encodeURIComponent(
-            `Olá! Meu nome é ${nome}.\nTelefone: ${telefone}\nObjetivo: ${objetivo}\nDúvidas: ${duvidas || "Nenhuma"}`
+            `Olá! Meu nome é ${nome}.\nTelefone: ${telefone}\nObjetivo: ${objetivo}`
         );
 
+        // Abre o WhatsApp
         const url = `https://wa.me/${numeroWhatsApp}?text=${mensagem}`;
         window.open(url, "_blank");
     });
 });
 </script>
+
 </body>
 </html>
