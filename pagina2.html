@@ -23,12 +23,12 @@
 
     <form id="formEbook">
         <div class="form-group">
-            <label for="nome">👤 Nome</label>
+            <label for="nome"> Nome</label>
             <input type="text" id="nome" placeholder="Seu nome completo" required>
         </div>
 
         <div class="form-group">
-            <label for="email">📧 Email</label>
+            <label for="email"> Email</label>
             <input type="email" id="email" placeholder="Seu email" required>
         </div>
 
@@ -92,7 +92,7 @@ body {
 .btn-enviar {
     width: 100%;
     padding: 12px;
-    background-color: #25D366;
+    background-color: #633414;
     color: white;
     border: none;
     border-radius: 10px;
@@ -104,7 +104,7 @@ body {
 }
 
 .btn-enviar:hover {
-    background-color: #1ebe5d;
+    background-color: #633414;
     box-shadow: 0 5px 15px rgba(0,0,0,0.12);
 }
 
@@ -123,6 +123,7 @@ body {
 </style>
 
 <script>
+
 document.addEventListener("DOMContentLoaded", function() {
     const formEbook = document.getElementById("formEbook");
 
@@ -131,22 +132,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const nome = document.getElementById("nome").value.trim();
         const email = document.getElementById("email").value.trim();
-        const telefone = document.getElementById("telefone").value.trim();
 
-        if(!nome || !email || !telefone){
+        if(!nome || !email ){
             alert("Por favor, preencha todos os campos!");
             return;
         }
 
         const numeroProfissional = "5521993111831";
         const mensagem = encodeURIComponent(
-            `Olá! \nMeu nome é ${nome}.\nE-mail: ${email}\nWhatsApp: ${telefone}\nGostaria de receber o ebook.`
+            `Olá! \nMeu nome é ${nome}.\nE-mail: ${email}\nGostaria de receber o ebook.`
         );
 
         window.open(`https://wa.me/${numeroProfissional}?text=${mensagem}`, "_blank");
     });
 });
 </script>
+
 
 </body>
 </html>
