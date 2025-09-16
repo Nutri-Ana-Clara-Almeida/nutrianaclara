@@ -17,11 +17,10 @@ p {
     line-height: 1.5;
 }
 
-/* Rodapé principal */
-
+/* Rodapé principal compacto */
 .rodape {
   width: 100%;
-  padding: 8px 10px; /* mais compacto verticalmente */
+  padding: 4px 10px; /* menor padding vertical */
   background-color: #e9e4d9; 
   position: relative;
   z-index: 1;
@@ -30,7 +29,7 @@ p {
   align-items: center;
   flex-direction: column;
   font-family: 'Arial', sans-serif;
-  box-shadow: 0 -1px 8px rgba(0,0,0,0.05); /* sombra leve */
+  box-shadow: 0 -1px 8px rgba(0,0,0,0.05);
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   transition: all 0.3s ease;
@@ -41,16 +40,18 @@ p {
   max-width: 1200px;
   width: 100%;
   text-align: center;
+  padding: 0; /* remove padding extra */
 }
 
 /* Nomes e assinaturas */
 .rodape-nomes {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  font-size: 14px; /* fonte menor */
+  gap: 15px;      /* menor espaço entre nomes */
+  font-size: 13px; /* fonte menor */
   color: #333;
-  margin-bottom: 6px; /* menos espaço */
+  margin-bottom: 2px; /* menos espaço abaixo */
+  flex-wrap: wrap;
 }
 
 .rodape-nomes .assinatura {
@@ -62,11 +63,10 @@ p {
   color: #555;
 }
 
-
 /* Direitos autorais */
 .rodape-direitos {
-  margin-top: 6px;
-  font-size: 12px; /* menor e mais discreto */
+  margin-top: 2px; /* reduz espaço */
+  font-size: 11px; /* menor e mais discreto */
   color: #999;
 }
 
@@ -74,10 +74,10 @@ p {
 @media (max-width: 768px) {
   .rodape-nomes {
     flex-direction: column;
-    gap: 6px;
+    gap: 4px; /* ainda mais compacto em telas pequenas */
   }
   .rodape-contato {
-    gap: 8px;
+    gap: 6px;
   }
 }
 
@@ -367,18 +367,24 @@ p {
 @media (max-width: 480px) {
     .imc-widget {
         display: flex;
-        flex-direction: column;   /* empilha os campos verticalmente */
-        align-items: center;      /* centraliza os campos */
-        gap: 1.5rem;              /* aumenta o espaçamento entre inputs e botão */
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem; /* espaçamento entre todos os elementos */
     }
 
-    #imcForm input,
-    #imcForm button {
+    #imcForm input {
         width: 100%;
         max-width: 350px;
         box-sizing: border-box;
-        margin-bottom: 0;         /* removemos margens duplicadas */
-        padding: 0.8rem;          /* aumenta o tamanho interno para toque no celular */
+        padding: 0.8rem;
+        margin-bottom: 0.5rem; /* espaço extra entre os inputs */
+    }
+
+    #imcForm button {
+        width: 100%;
+        max-width: 350px;
+        padding: 0.8rem;
+        margin-top: 1rem; /* distância maior do último input */
     }
 
     .imc-resultado {
@@ -387,8 +393,6 @@ p {
         margin-top: 1rem;
     }
 }
-
-
 
 /* ====== SEÇÃO: DO QUE VOCÊ PRECISA ====== */
 .o-que-voce-precisa {
@@ -709,4 +713,3 @@ body, html {
     font-weight: bold;
     color: #633414;
 }
-
