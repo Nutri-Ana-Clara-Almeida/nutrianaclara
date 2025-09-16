@@ -219,8 +219,8 @@ p {
 /* Ajuste da foto do perfil */
 .perfil-foto {
     flex-shrink: 0;
-    width: 280px;      /* largura maior */
-    height: 280px;     /* altura igual para manter proporção */
+    width: 300px;      /* largura maior */
+    height: 350px;     /* altura igual para manter proporção */
 }
 
 .perfil-foto img {
@@ -364,7 +364,6 @@ p {
     font-weight: bold;
     color: #633414;
 }
-
 @media (max-width: 480px) {
     .calculadora-imc {
         padding: 1rem;
@@ -384,8 +383,6 @@ p {
         max-width: 350px; /* evita que fiquem muito largos no desktop */
     }
 }
-
-
 
 
 /* ====== SEÇÃO: DO QUE VOCÊ PRECISA ====== */
@@ -412,7 +409,7 @@ p {
 }
 
 .card {
-    background-color: #fff;
+    background-color: #e9e4d9;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     width: 240px;
@@ -707,4 +704,3 @@ body, html {
     font-weight: bold;
     color: #633414;
 }
-
