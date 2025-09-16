@@ -99,7 +99,9 @@ function enviarWhatsAppFinal(event) {
     const nome = document.getElementById('nomeFinal').value.trim();
     const estado = document.getElementById('estadoFinal').value.trim();
     const telefone = document.getElementById('telefoneFinal').value.trim();
-    const objetivo = document.getElementById('objetivoFinal').value;
+    const objetivoSelect = document.getElementById('objetivoFinal');
+    const objetivo = objetivoSelect.options[objetivoSelect.selectedIndex].text;
+
     const tipoAtendimento = document.getElementById('tipoAtendimentoFinal').value;
 
     if (!nome || !estado || !telefone || !objetivo || !tipoAtendimento) {
