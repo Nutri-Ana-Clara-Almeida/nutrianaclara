@@ -146,13 +146,9 @@ p {
     border-radius: 1px;
 }
 
-/* ====== PERFIL PROFISSIONAL ====== */
-
-/* ====== FONTS ====== */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Lora:wght@400;600&display=swap');
 
 /* ====== PERFIL PROFISSIONAL ====== */
-/* ====== PERFIL PROFISSIONAL ====== */
+
 
 /* ====== FONTS ====== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Lora:wght@400;600&display=swap');
@@ -161,14 +157,23 @@ p {
 .perfil-widget {
     width: 100vw;
     padding: 100px 0;
-    background: url("capa_01.jpg") no-repeat center top; /* insira aqui sua imagem de fundo */
-    background-size: cover;   /* cover preenche todo o container */
+    background: url("capa_01.jpg") no-repeat center top;
+    background-size: cover; /* desktop */
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     box-sizing: border-box;
     margin: 0;
+}
+
+/* Mobile: garante que a imagem inteira apareça e detalhes não cortem */
+@media (max-width: 768px) {
+    .perfil-widget {
+        background-position: center top;
+        background-size: contain; /* mostra toda a imagem sem cortar */
+        padding: 70px 0;
+    }
 }
 
 /* Container do texto e foto */
