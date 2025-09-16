@@ -365,18 +365,26 @@ p {
     color: #633414;
 }
 
-/* ===== Ajuste leve nos cards ===== */
-.cards {
-    gap: 2rem; /* mantém espaçamento entre cards */
+@media (max-width: 480px) {
+    .calculadora-imc {
+        padding: 1rem;
+        margin: 1rem auto 2rem;
+    }
+
+    .imc-widget {
+        gap: 1rem; /* reduz ainda mais o espaçamento */
+    }
+
+    .imc-resultado {
+        width: 100%;
+    }
+
+    #imcForm input,
+    #imcForm button {
+        max-width: 350px; /* evita que fiquem muito largos no desktop */
+    }
 }
 
-.card {
-    transition: transform 0.2s ease; /* mantém efeito hover sem quebrar layout */
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
 
 
 
@@ -699,3 +707,4 @@ body, html {
     font-weight: bold;
     color: #633414;
 }
+
