@@ -66,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
 // Seleciona todos os carrosséis
 document.querySelectorAll('.carrossel-wrapper').forEach(wrapper => {
   const slides = wrapper.querySelectorAll('.slide');
@@ -86,8 +85,24 @@ document.querySelectorAll('.carrossel-wrapper').forEach(wrapper => {
 
   // Clique nas bolinhas
   bolinhas.forEach((bolinha, i) => {
-    bolinha.addEventListener('click', () => showSlide(i));
+    bolinha.addEventListener('click', () => {
+      showSlide(i);
+      resetAutoPlay(); // reinicia autoplay ao clicar
+    });
   });
+
+  // --- AUTOPLAY ---
+  function autoPlay() {
+    let next = (index + 1) % slides.length;
+    showSlide(next);
+  }
+
+  let play = setInterval(autoPlay, 8000); // muda a cada 8 segundos
+
+  function resetAutoPlay() {
+    clearInterval(play);
+    play = setInterval(autoPlay, 8000);
+  }
 });
 
 
