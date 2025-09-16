@@ -243,14 +243,16 @@ p {
 /* ====== RESPONSIVIDADE SOMENTE MOBILE (tablets) ====== */
 @media (max-width: 768px) {
     .perfil-widget {
-        padding: 40px 0;
-        background-size: contain;           /* mostra a imagem inteira */
-        background-position: top center;    /* melhor visibilidade dos detalhes */
+        background: url("capa_02.jpg") no-repeat center top; /* imagem diferente */
+        background-size: contain;       /* mostra toda a imagem sem cortar */
+        background-position: top center;
         min-height: auto;
+        padding: 50px 0;
         display: flex;
         justify-content: center;
         align-items: flex-start;
     }
+}
 
     .perfil-container {
         flex-direction: column;
@@ -279,7 +281,7 @@ p {
     .perfil-texto .frase-destaque {
         font-size: 1rem;
     }
-}
+
 
 /* ====== RESPONSIVIDADE SOMENTE MOBILE (celulares pequenos) ====== */
 @media (max-width: 480px) {
@@ -304,6 +306,8 @@ p {
         font-size: 0.95rem;
     }
 }
+
+
 
 
 /* ====== QUEM EU SOU ====== */
