@@ -153,7 +153,7 @@ p {
 /* ====== FONTS ====== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Lora:wght@400;600&display=swap');
 
-/* ====== PERFIL WIDGET ====== */
+/* PERFIL WIDGET */
 .perfil-widget {
     width: 100vw;
     padding: 100px 0;
@@ -165,20 +165,39 @@ p {
     position: relative;
     box-sizing: border-box;
     margin: 0;
+    min-height: 600px; /* garante altura mínima para mostrar a foto */
 }
 
 /* Ajuste para mobile */
 @media (max-width: 768px) {
     .perfil-widget {
-        background-size: cover;          /* cobre toda a área */
-        background-position: center top; /* mantém o foco na parte superior */
-        padding: 20px 0;                 /* reduz o padding para a imagem não ficar cortada */
+        background-size: cover;          
+        background-position: center top; 
+        padding: 40px 0;                 /* um pouco mais de padding para dar espaço */
         display: flex;
         justify-content: center;
-        align-items: flex-start;         /* garante que a foto do perfil fique dentro do fundo */
+        align-items: flex-start;
+        min-height: 500px;               /* altura mínima no mobile */
+    }
+
+    .perfil-container {
+        flex-direction: column;
+        gap: 25px;
+        width: 100%;
+        padding: 0 12px;
+        align-items: center; /* centraliza foto e texto */
+    }
+
+    .perfil-foto {
+        width: 230px;
+        height: 230px;
+    }
+
+    .perfil-texto {
+        text-align: center;
+        padding: 20px 12px;
     }
 }
-
 
 /* Container do texto e foto */
 .perfil-container {
@@ -791,4 +810,3 @@ body, html {
     transform: scale(1.2);        /* cresce levemente ao passar o mouse */
     cursor: pointer;
 }
-
