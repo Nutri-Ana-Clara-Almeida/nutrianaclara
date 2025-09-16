@@ -123,7 +123,6 @@ body {
 </style>
 
 <script>
-
 document.addEventListener("DOMContentLoaded", function() {
     const formEbook = document.getElementById("formEbook");
 
@@ -133,15 +132,19 @@ document.addEventListener("DOMContentLoaded", function() {
         const nome = document.getElementById("nome").value.trim();
         const email = document.getElementById("email").value.trim();
 
-        if(!nome || !email ){
+        if(!nome || !email){
             alert("Por favor, preencha todos os campos!");
             return;
         }
 
         const numeroProfissional = "5521993111831";
+
+        // Mensagem limpa, sem espaços extras
         const mensagem = encodeURIComponent(
-            `Olá! \nMeu nome é ${nome}.\nE-mail: ${email}
-            \nGostaria de receber o ebook.`
+`Olá!
+Meu nome é ${nome}.
+E-mail: ${email}
+Gostaria de receber o ebook.`
         );
 
         window.open(`https://wa.me/${numeroProfissional}?text=${mensagem}`, "_blank");
