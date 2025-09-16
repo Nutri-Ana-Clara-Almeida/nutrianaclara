@@ -248,8 +248,8 @@ p {
     }
 
     .perfil-foto {
-        width: 200px;
-        height: 200px;
+        width: 230px;
+        height: 230px;
     }
 
     .perfil-texto {
@@ -369,22 +369,21 @@ p {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1rem; /* espaçamento entre todos os elementos */
+        gap: 1rem; /* espaçamento entre inputs e outros elementos */
     }
 
     #imcForm input {
         width: 100%;
         max-width: 350px;
-        box-sizing: border-box;
         padding: 0.8rem;
-        margin-bottom: 0.5rem; /* espaço extra entre os inputs */
+        box-sizing: border-box;
     }
 
     #imcForm button {
         width: 100%;
         max-width: 350px;
         padding: 0.8rem;
-        margin-top: 1rem; /* distância maior do último input */
+        margin-top: 1.5rem; /* distância garantida do último input */
     }
 
     .imc-resultado {
@@ -393,6 +392,7 @@ p {
         margin-top: 1rem;
     }
 }
+
 
 /* ====== SEÇÃO: DO QUE VOCÊ PRECISA ====== */
 .o-que-voce-precisa {
@@ -615,7 +615,7 @@ body, html {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #30965c;
+    border-color: #633414;
     background: #fff;
     box-shadow: 0 0 8px rgba(48, 150, 92, 0.2);
 }
@@ -636,7 +636,7 @@ body, html {
 }
 
 .btn-enviar-final:hover {
-    background-color: #257a46;
+    background-color: #633414;
     box-shadow: 0 8px 20px rgba(48, 150, 92, 0.4);
     transform: translateY(-2px);
 }
