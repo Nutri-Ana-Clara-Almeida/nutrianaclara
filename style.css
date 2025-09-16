@@ -365,24 +365,29 @@ p {
     color: #633414;
 }
 @media (max-width: 480px) {
-    .calculadora-imc {
-        padding: 1rem;
-        margin: 1rem auto 2rem;
-    }
-
     .imc-widget {
-        gap: 1rem; /* reduz ainda mais o espaçamento */
-    }
-
-    .imc-resultado {
-        width: 100%;
+        display: flex;
+        flex-direction: column;   /* empilha os campos verticalmente */
+        align-items: center;      /* centraliza os campos */
+        gap: 1.5rem;              /* aumenta o espaçamento entre inputs e botão */
     }
 
     #imcForm input,
     #imcForm button {
-        max-width: 350px; /* evita que fiquem muito largos no desktop */
+        width: 100%;
+        max-width: 350px;
+        box-sizing: border-box;
+        margin-bottom: 0;         /* removemos margens duplicadas */
+        padding: 0.8rem;          /* aumenta o tamanho interno para toque no celular */
+    }
+
+    .imc-resultado {
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
     }
 }
+
 
 
 /* ====== SEÇÃO: DO QUE VOCÊ PRECISA ====== */
@@ -704,3 +709,4 @@ body, html {
     font-weight: bold;
     color: #633414;
 }
+
