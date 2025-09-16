@@ -147,40 +147,34 @@ p {
 }
 
 /* ====== PERFIL PROFISSIONAL ====== */
+/* ====== FONTS ====== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Lora:wght@400;600&display=swap');
+
+/* ====== PERFIL PROFISSIONAL ====== */
 .perfil-widget {
     width: 100vw;
     padding: 100px 0;
-    position: relative;
+    background: url("capa_01.jpg") no-repeat center top;
+    background-size: cover;   /* cover para preencher todo o container */
+    background-color: #000;   /* fallback caso a imagem não carregue */
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* garante que nada vaze */
-}
-
-/* ====== IMAGEM DE FUNDO ====== */
-.perfil-fundo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('capa_01.jpg');
-    background-size: cover;
-    background-position: center top;
-    z-index: 0; /* atrás do conteúdo */
-}
-
-/* Container do conteúdo */
-.perfil-container {
     position: relative;
-    z-index: 1; /* conteúdo na frente da imagem */
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Container do texto e foto */
+.perfil-container {
     display: flex;
+    max-width: 1200px;
+    width: 100%;
     gap: 60px;
     flex-wrap: wrap;
     align-items: center;
-    max-width: 1200px;
-    width: 100%;
     padding: 0 10px;
+    margin: 0 auto;
     box-sizing: border-box;
 }
 
@@ -191,7 +185,7 @@ p {
     font-family: 'Poppins', 'Arial', sans-serif;
     line-height: 1.9;
     text-align: left;
-    padding: 20px;
+    padding: 25px;
     background-color: rgba(0, 0, 0, 0.35);
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.25);
@@ -200,22 +194,26 @@ p {
 
 .perfil-texto h1 {
     font-family: 'Lora', serif;
-    font-size: 3.2rem;
+    font-size: 3.5rem;  /* AUMENTEI o tamanho do nome */
     font-weight: 300;
     margin-bottom: 15px;
     color: #fff;              
 }
 
 .perfil-texto p {
-    font-size: 1.25rem;
-    margin-bottom: 12px;
-    font-weight: 100;
+    font-size: 1.08rem;
+    margin-bottom: 10px;
+    font-weight: 0;
 }
 
 .perfil-texto .frase-destaque {
-    font-size: 0.95rem;
+    font-size: 1rem;  /* DIMINUI a frase destaque */
     font-weight: 100;
     color: #fff;
+}
+
+.perfil-texto:hover {
+    transform: translateY(-5px);
 }
 
 /* ====== FOTO DO PERFIL ====== */
@@ -258,6 +256,12 @@ p {
         padding: 20px 12px;
     }
 
+    .perfil-widget {
+        padding: 70px 0;
+        background-position: center top;
+        background-size: contain; /* mostra toda a imagem no mobile */
+    }
+
     .perfil-texto h1 {
         font-size: 2.4rem;
     }
@@ -269,15 +273,13 @@ p {
     .perfil-texto .frase-destaque {
         font-size: 1.1rem;
     }
-
-    .perfil-widget {
-        padding: 70px 0;
-    }
 }
 
 @media (max-width: 480px) {
     .perfil-widget {
         padding: 60px 0;
+        background-position: center top;
+        background-size: contain;
     }
 
     .perfil-foto {
@@ -297,7 +299,6 @@ p {
         font-size: 1rem;
     }
 }
-
 
 
 /* ====== QUEM EU SOU ====== */
