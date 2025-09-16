@@ -156,7 +156,6 @@ p {
     padding: 100px 0;
     background: url("capa_01.jpg") no-repeat center top;
     background-size: cover;   /* cover para preencher todo o container */
-    background-color: #000;   /* fallback caso a imagem não carregue */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -776,3 +775,4 @@ body, html {
     transform: scale(1.2);        /* cresce levemente ao passar o mouse */
     cursor: pointer;
 }
+
