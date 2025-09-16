@@ -167,11 +167,11 @@ p {
     margin: 0;
 }
 
-/* Mobile: garante que a imagem inteira apareça e detalhes não cortem */
+/* Mobile */
 @media (max-width: 768px) {
     .perfil-widget {
-        background-position: center top;
-        background-size: contain; /* mostra toda a imagem sem cortar */
+        background-size: cover;        /* cobre toda a área */
+        background-position: top center; /* centraliza o topo da imagem */
         padding: 70px 0;
     }
 }
