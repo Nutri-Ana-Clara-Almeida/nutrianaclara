@@ -152,7 +152,7 @@ p {
 .perfil-widget {
     width: 100vw;
     padding: 100px 0;
-    background: url('capa_01.jpg') no-repeat center center;
+    background: url('img/capa_01') no-repeat center center;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -175,12 +175,11 @@ p {
 }
 
 /* ====== TEXTO ====== */
-/* ====== TEXTO ====== */
 .perfil-texto {
     flex: 1;
     color: #fff;
-    font-family: 'Poppins', 'Arial', sans-serif; /* fonte mais clean e moderna */
-    line-height: 1.8;
+    font-family: 'Poppins', 'Arial', sans-serif;
+    line-height: 1.9;              /* mais espaçamento entre linhas */
     text-align: left;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.35);
@@ -190,51 +189,46 @@ p {
 }
 
 .perfil-texto h1 {
-    font-family: 'Lora', serif;   /* título elegante */
-    font-size: 3rem;
-    font-weight: 200;
-    margin-bottom: 10px;
+    font-family: 'Lora', serif;
+    font-size: 3.7rem;             /* título maior no desktop */
+    font-weight: 300;
+    margin-bottom: 15px;
     color: #fff;              
 }
 
 .perfil-texto p {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    font-weight: 200;
+    font-size: 1.25rem;            /* parágrafo maior */
+    margin-bottom: 12px;
+    font-weight: 300;
 }
 
 .perfil-texto .frase-destaque {
-    font-size: 1rem;
+    font-size: 1.0rem;             /* destaque maior também */
     font-weight: 100;
     color: #fff;
 }
 
-.perfil-texto:hover {
-    transform: translateY(-5px);
-}
-
-/* ====== Ajustes para celular ====== */
+/* Ajustes para celular */
 @media (max-width: 768px) {
     .perfil-texto {
-        padding: 15px 12px;   /* menos espaço interno */
-        text-align: center;   /* centraliza o conteúdo */
-        line-height: 1.6;     /* mais compacto */
+        text-align: center;
+        padding: 15px 12px;
+        line-height: 1.6;
     }
 
     .perfil-texto h1 {
-        font-size: 2rem;      /* título reduzido */
-        line-height: 1.3;
+        font-size: 2.4rem;         /* ainda grande, mas sem quebrar */
     }
 
     .perfil-texto p {
-        font-size: 0.95rem;   /* texto mais proporcional */
+        font-size: 1.1rem;         /* aumenta no mobile sem ficar exagerado */
     }
 
     .perfil-texto .frase-destaque {
-        font-size: 1rem;
-        font-weight: 400;     /* um pouco mais visível */
+        font-size: 1.15rem;
     }
 }
+
 
 /* ====== FOTO DO PERFIL ====== */
 .perfil-foto {
