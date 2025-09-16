@@ -238,13 +238,13 @@ p {
     transform: translateY(-5px);
 }
 
-/* ====== RESPONSIVIDADE SOMENTE MOBILE ====== */
+/* ====== RESPONSIVIDADE SOMENTE MOBILE (TABLETS) ====== */
 @media (max-width: 768px) {
     .perfil-widget {
-        padding: 40px 0;            /* reduz padding para não cortar a imagem */
-        background-size: cover;      /* garante que a imagem cubra toda a tela */
-        background-position: center; /* centraliza a imagem */
-        min-height: 100vh;           /* ocupa altura total do celular */
+        padding: 40px 0;
+        background-size: contain;           /* mostra a imagem inteira */
+        background-position: top center;    /* melhor visibilidade dos detalhes */
+        min-height: auto;
         display: flex;
         justify-content: center;
         align-items: flex-start;
@@ -252,52 +252,59 @@ p {
 
     .perfil-container {
         flex-direction: column;
-        gap: 25px;
-        width: 100%;
-        padding: 0 12px;
-        align-items: center; /* centraliza foto e texto */
+        gap: 20px;
+        width: 90%;
+        padding: 0 10px;
+        align-items: center;
     }
 
     .perfil-foto {
-        width: 230px;
-        height: 230px;
+        width: 220px;
+        height: 220px;
     }
 
     .perfil-texto {
         text-align: center;
-        padding: 20px 12px;
+        padding: 15px 10px;
+        line-height: 1.6;                  /* texto mais organizado */
     }
 
     .perfil-texto h1 {
-        font-size: 2.4rem;
-    }
-
-    .perfil-texto p,
-    .perfil-texto .frase-destaque {
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .perfil-widget {
-        padding: 60px 0;
-        background-size: cover;
-        background-position: center;
-        min-height: 100vh;
-    }
-
-    .perfil-foto {
-        width: 200px;
-        height: 200px;
-    }
-
-    .perfil-texto h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     .perfil-texto p,
     .perfil-texto .frase-destaque {
         font-size: 1rem;
+    }
+}
+
+/* ====== RESPONSIVIDADE SOMENTE MOBILE (CELULARES PEQUENOS) ====== */
+@media (max-width: 480px) {
+    .perfil-widget {
+        padding: 50px 0;
+        background-size: contain;
+        background-position: top center;
+        min-height: auto;
+    }
+
+    .perfil-foto {
+        width: 180px;
+        height: 180px;
+    }
+
+    .perfil-texto {
+        padding: 12px 8px;
+        line-height: 1.5;
+    }
+
+    .perfil-texto h1 {
+        font-size: 1.8rem;
+    }
+
+    .perfil-texto p,
+    .perfil-texto .frase-destaque {
+        font-size: 0.95rem;
     }
 }
 
