@@ -147,15 +147,22 @@ p {
 }
 
 /* ====== PERFIL PROFISSIONAL ====== */
+
 /* ====== FONTS ====== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Lora:wght@400;600&display=swap');
 
 /* ====== PERFIL PROFISSIONAL ====== */
+/* ====== PERFIL PROFISSIONAL ====== */
+
+/* ====== FONTS ====== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Lora:wght@400;600&display=swap');
+
+/* ====== PERFIL WIDGET ====== */
 .perfil-widget {
     width: 100vw;
     padding: 100px 0;
-    background: url("capa_01.jpg") no-repeat center top;
-    background-size: cover;   /* cover para preencher todo o container */
+    background: url("capa_01.jpg") no-repeat center top; /* insira aqui sua imagem de fundo */
+    background-size: cover;   /* cover preenche todo o container */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -193,7 +200,7 @@ p {
 
 .perfil-texto h1 {
     font-family: 'Lora', serif;
-    font-size: 3.5rem;  /* AUMENTEI o tamanho do nome */
+    font-size: 3.5rem;  /* tamanho do nome */
     font-weight: 300;
     margin-bottom: 15px;
     color: #fff;              
@@ -206,7 +213,7 @@ p {
 }
 
 .perfil-texto .frase-destaque {
-    font-size: 1rem;  /* DIMINUI a frase destaque */
+    font-size: 1rem;  /* frase destaque menor */
     font-weight: 100;
     color: #fff;
 }
@@ -258,7 +265,7 @@ p {
     .perfil-widget {
         padding: 70px 0;
         background-position: center top;
-        background-size: contain; /* mostra toda a imagem no mobile */
+        background-size: contain; /* garante visibilidade total da imagem */
     }
 
     .perfil-texto h1 {
@@ -775,4 +782,3 @@ body, html {
     transform: scale(1.2);        /* cresce levemente ao passar o mouse */
     cursor: pointer;
 }
-
