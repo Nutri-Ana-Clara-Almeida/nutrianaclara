@@ -167,14 +167,18 @@ p {
     margin: 0;
 }
 
-/* Mobile */
+/* Ajuste para mobile */
 @media (max-width: 768px) {
     .perfil-widget {
-        background-size: cover;        /* cobre toda a área */
-        background-position: top center; /* centraliza o topo da imagem */
-        padding: 70px 0;
+        background-size: cover;          /* cobre toda a área */
+        background-position: center top; /* mantém o foco na parte superior */
+        padding: 20px 0;                 /* reduz o padding para a imagem não ficar cortada */
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;         /* garante que a foto do perfil fique dentro do fundo */
     }
 }
+
 
 /* Container do texto e foto */
 .perfil-container {
@@ -787,3 +791,4 @@ body, html {
     transform: scale(1.2);        /* cresce levemente ao passar o mouse */
     cursor: pointer;
 }
+
