@@ -323,7 +323,7 @@ body {
         font-size: 0.90rem;
     }
     .perfil-texto .frase-destaque {
-        font-size: 0.80rem;
+        font-size: 0.70rem;
     }
 
 /* ====== QUEM EU SOU ====== */
@@ -801,3 +801,4 @@ body, html {
     transform: scale(1.2);        /* cresce levemente ao passar o mouse */
     cursor: pointer;
 }
+
