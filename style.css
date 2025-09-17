@@ -319,11 +319,12 @@ body {
         font-size: 2rem;
     }
 
-    .perfil-texto p,
-    .perfil-texto .frase-destaque {
-        font-size: 0.85rem;
+    .perfil-texto p {
+        font-size: 0.90rem;
     }
-}
+    .perfil-texto .frase-destaque {
+        font-size: 0.80rem;
+    }
 
 /* ====== QUEM EU SOU ====== */
 
