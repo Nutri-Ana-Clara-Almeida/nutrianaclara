@@ -241,47 +241,50 @@ p {
 
 
 /* ====== RESPONSIVIDADE SOMENTE MOBILE (tablets) ====== */
+/* ====== RESPONSIVIDADE MOBILE/TABLET ====== */
 @media (max-width: 768px) {
     .perfil-widget {
-        background: url("capa_02.jpg") no-repeat center top; /* imagem diferente */
-        background-size: contain;       /* mostra toda a imagem sem cortar */
-        background-position: top center;
-        min-height: auto;
+        background: url("capa_02.jpg") no-repeat center center; /* centraliza a imagem */
+        background-size: cover;       /* cobre toda a largura e altura */
+        width: 100%;                  /* ocupa toda a largura da tela */
+        min-height: 100vh;            /* altura mínima = altura da tela */
         padding: 50px 0;
         display: flex;
         justify-content: center;
         align-items: flex-start;
+        overflow: hidden;             /* evita scroll lateral */
+        box-sizing: border-box;
     }
-}
 
     .perfil-container {
         flex-direction: column;
         gap: 20px;
-        width: 90%;
+        width: 100%;
         padding: 0 10px;
         align-items: center;
+        box-sizing: border-box;
     }
 
     .perfil-foto {
-        width: 220px;
-        height: 220px;
+        width: 250px;
+        height: 250px;
     }
 
     .perfil-texto {
         text-align: center;
         padding: 15px 10px;
-        line-height: 1.6;                  /* texto mais organizado */
+        line-height: 1.6;
     }
 
     .perfil-texto h1 {
-        font-size: 2.2rem;
+        font-size: 2.2rem; /* aumenta o nome da profissional */
     }
 
     .perfil-texto p,
     .perfil-texto .frase-destaque {
-        font-size: 1rem;
+        font-size: 0.85rem; /* diminui o texto do parágrafo */
     }
-
+}
 
 /* ====== RESPONSIVIDADE SOMENTE MOBILE (celulares pequenos) ====== */
 @media (max-width: 480px) {
@@ -293,20 +296,19 @@ p {
     }
 
     .perfil-foto {
-        width: 180px;
-        height: 180px;
+        width: 200px;
+        height: 200px;
     }
 
-    .perfil-texto h1 {
-        font-size: 1.8rem;
+   .perfil-texto h1 {
+        font-size: 2rem;       /* aumenta o nome */
     }
 
     .perfil-texto p,
     .perfil-texto .frase-destaque {
-        font-size: 0.95rem;
+        font-size: 0.85rem;    /* diminui o parágrafo */
     }
 }
-
 
 
 
