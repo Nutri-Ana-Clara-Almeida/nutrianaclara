@@ -5,9 +5,8 @@ body {
     font-family: Arial, sans-serif;
     background-color: #e9e4d9;
     color: black;
-    overflow-x: hidden; /* bloqueia rolagem lateral */
-    width: 100%;        /* garante largura exata da tela */
 }
+
 h1, h2, h3 {
     margin: 0;
     padding: 0;
@@ -147,6 +146,7 @@ p {
     border-radius: 1px;
 }
 
+
 /* ====== PERFIL PROFISSIONAL ====== */
 
 /* ====== FONTS ====== */
@@ -154,14 +154,17 @@ p {
 
 /* ====== PERFIL WIDGET (DESKTOP) ====== */
 .perfil-widget {
-    width: 100%;              /* ocupa toda a largura */
-    min-height: 100vh;        /* ocupa toda a altura da tela */
-    background: url("capa_01.jpg") no-repeat center center;
-    background-size: cover;   /* faz a imagem cobrir todo o espaço */
-    margin: 0;
-    padding: 0;
+    width: 100vw;
+    padding: 100px 0;
+    background: url("capa_01.jpg") no-repeat center top;
+    background-size: cover; /* desktop permanece igual */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     box-sizing: border-box;
-    overflow: hidden;         /* evita que algo estoure pra fora */
+    margin: 0;
+    min-height: 600px;
 }
 
 /* ====== CONTAINER DE FOTO E TEXTO ====== */
@@ -180,8 +183,8 @@ p {
 /* ====== FOTO DO PERFIL ====== */
 .perfil-foto {
     flex-shrink: 0;
-    width: 350px;   /* tamanho maior no desktop */
-    height: 400px;
+    width: 300px;
+    height: 350px;
 }
 
 .perfil-foto img {
@@ -235,17 +238,21 @@ p {
     transform: translateY(-5px);
 }
 
-/* ====== RESPONSIVIDADE MOBILE (tablets e celulares) ====== */
+
+
+/* ====== RESPONSIVIDADE SOMENTE MOBILE (tablets) ====== */
 @media (max-width: 768px) {
     .perfil-widget {
-        background: url("capa_02.jpg") no-repeat center center;
-        background-size: cover;   /* cobre toda a largura */
-        width: 100%;              /* corrige overflow */
-        min-height: 100vh;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
+        background: url("capa_02.jpg") no-repeat center top; /* imagem diferente */
+        background-size: contain;       /* mostra toda a imagem sem cortar */
+        background-position: top center;
+        min-height: auto;
+        padding: 50px 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
     }
+}
 
     .perfil-container {
         flex-direction: column;
@@ -256,14 +263,14 @@ p {
     }
 
     .perfil-foto {
-        width: 220px;   /* tamanho ajustado para tablet */
+        width: 220px;
         height: 220px;
     }
 
     .perfil-texto {
         text-align: center;
         padding: 15px 10px;
-        line-height: 1.6;
+        line-height: 1.6;                  /* texto mais organizado */
     }
 
     .perfil-texto h1 {
@@ -274,18 +281,15 @@ p {
     .perfil-texto .frase-destaque {
         font-size: 1rem;
     }
-}
 
-/* ====== RESPONSIVIDADE MOBILE (celulares pequenos) ====== */
+
+/* ====== RESPONSIVIDADE SOMENTE MOBILE (celulares pequenos) ====== */
 @media (max-width: 480px) {
     .perfil-widget {
-        background: url("capa_02.jpg") no-repeat center center;
-        background-size: cover;
-        width: 100%;              /* ocupa toda largura sem overflow */
-        min-height: 100vh;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
+        padding: 50px 0;
+        background-size: contain;
+        background-position: top center;
+        min-height: auto;
     }
 
     .perfil-foto {
@@ -302,6 +306,7 @@ p {
         font-size: 0.95rem;
     }
 }
+
 
 
 
