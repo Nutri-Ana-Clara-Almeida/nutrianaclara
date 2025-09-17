@@ -241,7 +241,7 @@ p {
 
 
 /* ====== RESPONSIVIDADE SOMENTE MOBILE (tablets) ====== */
-/* ====== RESPONSIVIDADE MOBILE/TABLET ====== */
+
 @media (max-width: 768px) {
     .perfil-widget {
         background: url("capa_02.jpg") no-repeat center center; /* centraliza a imagem */
@@ -266,8 +266,8 @@ p {
     }
 
     .perfil-foto {
-        width: 250px;
-        height: 250px;
+        width: 230px;
+        height: 230px;
     }
 
     .perfil-texto {
@@ -282,7 +282,7 @@ p {
 
     .perfil-texto p,
     .perfil-texto .frase-destaque {
-        font-size: 0.85rem; /* diminui o texto do parágrafo */
+        font-size: 0.75rem; /* diminui o texto do parágrafo */
     }
 }
 
@@ -290,9 +290,12 @@ p {
 @media (max-width: 480px) {
     .perfil-widget {
         padding: 50px 0;
-        background-size: contain;
-        background-position: top center;
-        min-height: auto;
+        background: url("capa_02.jpg") no-repeat center center; /* centraliza a imagem */
+        background-size: cover;       /* cobre toda a largura e altura */
+        width: 100%;                  /* ocupa toda a largura da tela */
+        min-height: 100vh;            /* altura mínima = altura da tela */
+        overflow: hidden;             /* evita scroll lateral */
+        box-sizing: border-box;
     }
 
     .perfil-foto {
@@ -300,7 +303,7 @@ p {
         height: 200px;
     }
 
-   .perfil-texto h1 {
+    .perfil-texto h1 {
         font-size: 2rem;       /* aumenta o nome */
     }
 
@@ -309,7 +312,6 @@ p {
         font-size: 0.85rem;    /* diminui o parágrafo */
     }
 }
-
 
 
 /* ====== QUEM EU SOU ====== */
