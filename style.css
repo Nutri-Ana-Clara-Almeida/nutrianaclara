@@ -8,8 +8,6 @@ body {
     overflow-x: hidden; /* bloqueia rolagem lateral */
     width: 100%;        /* garante largura exata da tela */
 }
-
-
 h1, h2, h3 {
     margin: 0;
     padding: 0;
@@ -156,15 +154,17 @@ p {
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Lora:wght@400;600&display=swap');
 
 /* ====== PERFIL WIDGET (DESKTOP) ====== */
+
+/* SEÇÃO DA CAPA */
 .perfil-widget {
-  width: 100%; /* largura total */
-  min-height: 100vh; /* ocupa a tela toda na vertical */
-  background: url("capa_02.jpg") no-repeat center top;
-  background-size: cover; 
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 100%;              /* ocupa toda a largura */
+    min-height: 100vh;        /* ocupa toda a altura da tela */
+    background: url("capa_01.jpg") no-repeat center center;
+    background-size: cover;   /* faz a imagem cobrir todo o espaço */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;         /* evita que algo estoure pra fora */
 }
 
 
@@ -243,14 +243,15 @@ p {
 
 /* ====== RESPONSIVIDADE SOMENTE MOBILE (tablets) ====== */
 
-/* Mobile */
+
+/* VERSÃO MOBILE */
 @media (max-width: 768px) {
-  .perfil-widget {
-    background: url("capa_02.jpg") no-repeat center center;
-    background-size: cover;  /* cobre toda a tela */
-    width: 100%;             /* pega a lateral toda */
-    min-height: 100vh;       /* altura da tela */
-  }
+    .perfil-widget {
+        background: url("capa_02.jpg") no-repeat center center;
+        background-size: cover;
+        width: 100%;
+        min-height: 100vh;
+    }
 }
     .perfil-container {
         flex-direction: column;
