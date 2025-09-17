@@ -270,8 +270,8 @@ body {
     }
 
     .perfil-foto {
-        width: 220px;
-        height: 220px;
+        width: 270px;
+        height: 270px;
     }
 
     .perfil-texto {
@@ -321,7 +321,7 @@ body {
 
     .perfil-texto p,
     .perfil-texto .frase-destaque {
-        font-size: 0.70rem;
+        font-size: 0.85rem;
     }
 }
 
