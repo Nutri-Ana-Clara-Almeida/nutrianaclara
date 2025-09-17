@@ -242,18 +242,15 @@ p {
 
 /* ====== RESPONSIVIDADE SOMENTE MOBILE (tablets) ====== */
 @media (max-width: 768px) {
-    .perfil-widget {
-        background: url("capa_02.jpg") no-repeat center top; /* imagem diferente */
-        background-size: contain;       /* mostra toda a imagem sem cortar */
-        background-position: top center;
-        min-height: auto;
-        padding: 50px 0;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-    }
-}
-
+  .perfil-widget {
+    background: url("capa_02.jpg") no-repeat center center;
+    background-size: cover;   /* cobre toda a largura */
+    background-attachment: scroll; /* evita bug de movimento */
+    width: 100vw;             /* ocupa toda a largura da tela */
+    min-height: 100vh;        /* altura mínima = altura da tela */
+    margin: 0;
+    padding: 0;
+  }
     .perfil-container {
         flex-direction: column;
         gap: 20px;
@@ -785,3 +782,4 @@ body, html {
     transform: scale(1.2);        /* cresce levemente ao passar o mouse */
     cursor: pointer;
 }
+
