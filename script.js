@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
     percentual = 100;
     cor = "#d90429";
     classificacao = "Obesidade Grau III";
-    mensagem = "A consulta é urgente recomendada com acompanhamento multidisciplinar.";
+    mensagem = "A consulta nutricional é imediatamente recomendada.";
 }
 
 
@@ -145,6 +145,7 @@ function enviarWhatsAppFinal(event) {
     // Abre o WhatsApp em nova aba ou no app do celular
     window.open(urlWhats, '_blank');
 }
+
 
 
 
