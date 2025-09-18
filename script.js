@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
     percentual = 85;
     cor = "#fb8500";
     classificacao = "Obesidade Grau I";
-    mensagem = "Agendar a consulta ajuda a prevenir riscos à saúde.";
+    mensagem = "Agendar uma consulta ajuda a prevenir riscos à saúde.";
 } else if (imc < 39.9) {
     percentual = 90;
     cor = "#d65a31";
@@ -145,4 +145,5 @@ function enviarWhatsAppFinal(event) {
     // Abre o WhatsApp em nova aba ou no app do celular
     window.open(urlWhats, '_blank');
 }
+
 
