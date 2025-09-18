@@ -223,28 +223,18 @@ p {
     color: #fff;
 }
 
-.perfil-texto p {
-    font-size: 1.08rem;
-    margin-bottom: 10px;
+.perfil-texto p strong {
+    font-size: 1.5rem;
+    font-weight: 300;
+   
 }
 
-.perfil-texto .frase-destaque {
-    font-size: 1rem;
-    font-weight: 100;
-    color: #fff;
-}
+
 
 .perfil-texto:hover {
     transform: translateY(-5px);
 }
 
-
-/* Bloqueia scroll lateral */
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
 
 /* ====== MOBILE/TABLET ====== */
 @media (max-width: 768px) {
@@ -284,17 +274,25 @@ body {
         font-size: 2.2rem;
     }
 
-    .perfil-texto p,
-    .perfil-texto .frase-destaque {
+    .perfil-texto p strong {
+    
         font-size: 0.85rem;
     }
 }
 
+/* Bloqueia scroll lateral */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
 /* ====== CELULARES PEQUENOS ====== */
 @media (max-width: 480px) {
     .perfil-widget {
-        width: 100%;                        /* largura total da tela */
-        min-height: 100vh;                   /* altura total */
+        width: 100%;                        
+        min-height: 100vh;                   
         background: url("capa_02.jpg") no-repeat center center;
         background-size: cover;
         margin: 0;
@@ -322,9 +320,11 @@ body {
     .perfil-texto p {
         font-size: 0.90rem;
     }
+
     .perfil-texto .frase-destaque {
         font-size: 0.70rem;
     }
+}
 
 /* ====== QUEM EU SOU ====== */
 
@@ -801,4 +801,3 @@ body, html {
     transform: scale(1.2);        /* cresce levemente ao passar o mouse */
     cursor: pointer;
 }
-
