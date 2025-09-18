@@ -51,10 +51,12 @@ body {
 /* Formulário estilo profissional */
 main {
     display: flex;
-    justify-content: center; /* centraliza horizontalmente */
-    align-items: center;     /* centraliza verticalmente */
-    min-height: 100vh;       /* ocupa toda a altura da tela */
+    justify-content: center;
+    align-items: flex-start;  /* altera de center para top */
+    padding-top: 40px;        /* evita cortar no topo */
+    min-height: 100vh;
 }
+
 
 .form-section {
     max-width: 500px;
@@ -67,25 +69,31 @@ main {
 }
 
 .form-section h2 {
-    color: #4e342e;
     font-size: 2rem;
+    color: #4e342e;
     margin-bottom: 10px;
+    word-break: break-word; /* força a quebra de palavras grandes */
+    white-space: normal;    /* permite múltiplas linhas */
 }
 
 
 /* Ajuste para telas pequenas */
 @media (max-width: 480px) {
+    .form-section {
+        width: 90%;       /* ocupa quase toda a tela */
+        padding: 20px;    /* menos padding para não cortar o texto */
+        margin: 20px auto; 
+    }
+
     .form-section h2 {
-        font-size: 1.4rem;  /* reduz o tamanho da fonte */
-        line-height: 1.3;   /* evita cortar linhas */
-        word-wrap: break-word; /* quebra palavras grandes se necessário */
+        font-size: 1.5rem;  /* reduz o tamanho da fonte */
+        line-height: 1.3;   /* melhora leitura */
     }
 
     .form-section p {
-        font-size: 0.9rem;  /* opcional: reduz também o parágrafo */
+        font-size: 0.9rem;
     }
 }
-
 .form-section p {
     color: #555;
     margin-bottom: 25px;
@@ -181,174 +189,3 @@ Gostaria de receber o e-book.`
 
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Solicite um Ebook - Ana Clara Almeida</title>
-<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-</head>
-
-<body>
-<!-- Fundo animado -->
-<div id="particles-js" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1;"></div>
-
-
-<main>
-<section class="form-section">
-    <h2>📚 Solicite seu E-book</h2>
-    <p>Preencha os dados abaixo e a nutricionista enviará o e-book diretamente pelo WhatsApp.</p>
-
-    <form id="formEbook">
-        <div class="form-group">
-            <label for="nome"> Nome</label>
-            <input type="text" id="nome" placeholder="Nome completo" required>
-        </div>
-
-        <div class="form-group">
-            <label for="email"> Email</label>
-            <input type="email" id="email" placeholder="Seu email" required>
-        </div>
-
-       <div class="form-group">
-            <label for="telefone"> Telefone</label>
-            <input type="tel" id="telefone" placeholder="Seu Telefone" required>
-        </div>
-
-
-    
-
-        <button type="submit" class="btn-enviar">Enviar para WhatsApp</button>
-    </form>
-</section>
-</main>
-
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f7f5f0;
-}
-
-/* Formulário estilo profissional */
-main {
-    display: flex;
-    justify-content: center; /* centraliza horizontalmente */
-    align-items: center;     /* centraliza verticalmente */
-    min-height: 100vh;       /* ocupa toda a altura da tela */
-}
-
-.form-section {
-    max-width: 500px;
-    margin: 60px auto;
-    padding: 35px 25px;
-    background:#ffffff;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    text-align: center;
-}
-
-.form-section h2 {
-    color: #4e342e;
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.form-section p {
-    color: #555;
-    margin-bottom: 25px;
-}
-
-.form-group {
-    margin-bottom: 18px;
-    text-align: left;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: bold;
-    color:#4e342e;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 12px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    font-size: 15px;
-    box-sizing: border-box;
-}
-
-.btn-enviar {
-    width: 100%;
-    padding: 12px;
-    background-color: #633414;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.25s ease;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-}
-
-.btn-enviar:hover {
-    background-color: #633414;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .form-section {
-        margin: 40px 20px;
-        padding: 25px 15px;
-    }
-
-    .btn-enviar {
-        font-size: 14px;
-        padding: 10px;
-    }
-}
-</style>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const formEbook = document.getElementById("formEbook");
-
-    formEbook.addEventListener("submit", function(e){
-        e.preventDefault();
-
-        const nome = document.getElementById("nome").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const celular = document.getElementById("telefone").value.trim();
-
-    if(!nome || !email || !telefone){
-    alert("Por favor, preencha todos os campos!");
-    return;
-}
-
-
-        const numeroProfissional = "5521993111831";
-
-        // Mensagem limpa, sem espaços extras
-        const mensagem = encodeURIComponent(
-`Olá!
-Meu nome é ${nome}.
-E-mail: ${email}
-Celular: ${celular}
-Gostaria de receber o e-book.`
-        );
-
-        window.open(`https://wa.me/${numeroProfissional}?text=${mensagem}`, "_blank");
-    });
-});
-</script>
-
-
-</body>
-</html>
-
-
