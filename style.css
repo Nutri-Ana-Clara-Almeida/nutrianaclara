@@ -322,62 +322,73 @@ body {
     }
 
 }
+/* ====== QUEM EU SOU - DESKTOP ====== */
+.quem-eu-sou {
+    padding: 4rem 2rem;
+    background-color: #e9e4d9;
+    text-align: center; /* mantém título centralizado */
+}
 
-/* ====== QUEM EU SOU ====== */
+.quem-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* desktop: texto ao lado da foto */
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 2rem; /* espaço entre texto e foto */
+}
 
-    .quem-eu-sou {
-        padding: 4rem 2rem;
-        background-color: #e9e4d9;
-        text-align: center;
-    }
+.quem-texto {
+    max-width: 500px;
+    text-align: left; /* desktop: texto alinhado à esquerda */
+}
+
+.quem-texto h1 {
+    color: #633414;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.quem-texto p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.quem-foto img {
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ====== RESPONSIVIDADE CELULAR/TABLET ====== */
+@media (max-width: 768px) {
     .quem-container {
-        display: flex;
+        flex-direction: column;   /* texto em cima, foto embaixo */
         align-items: center;
-        justify-content: space-around;
-        max-width: 1200px;
-        margin: 0 auto;
-        flex-wrap: wrap;
+        gap: 1.5rem;
     }
-    .quem-texto {
-        max-width: 500px;
-        text-align: left;
 
+    .quem-texto {
+        text-align: center;       /* centraliza texto no celular */
     }
+
     .quem-texto h1 {
-        color: #633414;
-        margin-bottom: 2rem;
-        
-        
+        font-size: 2rem;
+        margin-bottom: 1rem;
     }
+
+    .quem-texto p {
+        font-size: 1rem;
+        line-height: 1.6;         /* mais legível */
+        margin-bottom: 1rem;
+    }
+
     .quem-foto img {
-        border-radius: 12px;
-        width: 300px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .divisoria {
-        border-top: 3px solid #633414;
-        margin: 2rem auto;
-        width: 80%;
-        
-    }
-    .galeria-texto h3 {
-        margin-bottom: 2rem;
-        color: #633414;
-        font-size: 1.5rem;
-    }
-    .galeria-imagens {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        flex-wrap: wrap;
-    }
-    .galeria-item img {
-        border-radius: 12px;
         width: 250px;
-        height: 200px;
-        object-fit: cover;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
+}
 
 
 /* ===== CALCULADORA IMC – Ajustes leves ===== */
@@ -471,7 +482,7 @@ body {
 .o-que-voce-precisa h2 {
     color: #633414;
     margin-bottom: 2rem;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
@@ -591,7 +602,7 @@ body {
 }
 
 .carrossel-texto-superior p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #555;
   margin: 10px 0;
   line-height: 1.5;
@@ -688,24 +699,19 @@ body, html {
 
 /* ====== BOTÃO ====== */
 .btn-enviar-final {
-    width: 100%;
-    padding: 1.2rem;
+    width: 50%;
+    padding: 1rem;
     background-color: #633414;
     color: white;
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     font-weight: bold;
     border: none;
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(48, 150, 92, 0.3);
+
 }
 
-.btn-enviar-final:hover {
-    background-color: #633414;
-    box-shadow: 0 8px 20px rgba(48, 150, 92, 0.4);
-    transform: translateY(-2px);
-}
 
 
 /* Seção de Feedbacks */
