@@ -24,32 +24,38 @@ document.addEventListener("DOMContentLoaded", function() {
         let mensagem = "";
         let classificacao = "";
 
-        if (imc < 18.5) {
-            percentual = 20;
-            cor = "#ffe066";
-            classificacao = "Abaixo do peso";
-            mensagem = "Consulta nutricional recomendada para orientação personalizada.";
-        } else if (imc < 24.9) {
-            percentual = 50;
-            cor = "#28a745";
-            classificacao = "Peso ideal";
-            mensagem = "Parabéns! Consultas regulares ajudam a manter a saúde.";
-        } else if (imc < 29.9) {
-            percentual = 70;
-            cor = "#ffb703";
-            classificacao = "Sobrepeso";
-            mensagem = "Consulta pode ajudar a criar um plano alimentar saudável.";
-        } else if (imc < 34.9) {
-            percentual = 85;
-            cor = "#fb8500";
-            classificacao = "Obesidade Grau I";
-            mensagem = "Agendar consulta ajuda a prevenir riscos à saúde.";
-        } else {
-            percentual = 100;
-            cor = "#d90429";
-            classificacao = "Obesidade Grau II/III";
-            mensagem = "É fortemente recomendado marcar uma consulta com um profissional.";
-        }
+       if (imc < 18.5) {
+    percentual = 20;
+    cor = "#ffe066";
+    classificacao = "Abaixo do peso";
+    mensagem = "Consulta nutricional recomendada para orientação personalizada.";
+} else if (imc < 24.9) {
+    percentual = 50;
+    cor = "#28a745";
+    classificacao = "Peso ideal";
+    mensagem = "Parabéns! Consultas regulares ajudam a manter a saúde.";
+} else if (imc < 29.9) {
+    percentual = 70;
+    cor = "#ffb703";
+    classificacao = "Sobrepeso";
+    mensagem = "Consulta pode ajudar a criar um plano alimentar saudável.";
+} else if (imc < 34.9) {
+    percentual = 85;
+    cor = "#fb8500";
+    classificacao = "Obesidade Grau I";
+    mensagem = "Agendar consulta ajuda a prevenir riscos à saúde.";
+} else if (imc < 39.9) {
+    percentual = 90;
+    cor = "#d65a31";
+    classificacao = "Obesidade Grau II";
+    mensagem = "É fortemente recomendado marcar uma consulta com um profissional.";
+} else {
+    percentual = 100;
+    cor = "#d90429";
+    classificacao = "Obesidade Grau III";
+    mensagem = "Consulta urgente recomendada com acompanhamento multidisciplinar.";
+}
+
 
         // Atualiza barra de progresso
         barra.style.width = percentual + "%";
