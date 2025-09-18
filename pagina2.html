@@ -11,10 +11,6 @@
 <!-- Fundo animado -->
 <div id="particles-js" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1;"></div>
 
-<header style="text-align:center; padding:30px 10px;">
-    <h1 style="color:#4e342e; font-family: 'Arial', sans-serif; font-size:2.5rem; letter-spacing:1px;">EBOOK GRATUITO</h1>
-    <p style="color:#555; font-size:1rem; margin-top:5px;">Receba seu ebook de forma prática e rápida pelo WhatsApp</p>
-</header>
 
 <main>
 <section class="form-section">
@@ -47,6 +43,13 @@ body {
 }
 
 /* Formulário estilo profissional */
+main {
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;     /* centraliza verticalmente */
+    min-height: 100vh;       /* ocupa toda a altura da tela */
+}
+
 .form-section {
     max-width: 500px;
     margin: 60px auto;
@@ -144,7 +147,6 @@ document.addEventListener("DOMContentLoaded", function() {
 `Olá!
 Meu nome é ${nome}.
 E-mail: ${email}
-
 Gostaria de receber o ebook.`
         );
 
@@ -156,4 +158,3 @@ Gostaria de receber o ebook.`
 
 </body>
 </html>
-
