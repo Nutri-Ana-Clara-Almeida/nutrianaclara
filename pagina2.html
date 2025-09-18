@@ -30,7 +30,7 @@
 
        <div class="form-group">
             <label for="telefone"> Telefone</label>
-            <input type="tel" id="celular" placeholder="Seu telefone" required>
+            <input type="tel" id="telefone" placeholder="Seu telefone" required>
         </div>
 
 
@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const email = document.getElementById("email").value.trim();
         const telefone = document.getElementById("telefone").value.trim();
 
-    if(!nome || !email || !celular){
+    if(!nome || !email || !telefone){
     alert("Por favor, preencha todos os campos!");
     return;
 }
