@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
     percentual = 20;
     cor = "#ffe066";
     classificacao = "Abaixo do peso";
-    mensagem = "A Consulta nutricional recomendada para orientação personalizada.";
+    mensagem = "A consulta nutricional recomendada para orientação personalizada.";
 } else if (imc < 24.9) {
     percentual = 50;
     cor = "#28a745";
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
     percentual = 70;
     cor = "#ffb703";
     classificacao = "Sobrepeso";
-    mensagem = "A Consulta pode ajudar a criar um plano alimentar saudável.";
+    mensagem = "A consulta pode ajudar a criar um plano alimentar saudável.";
 } else if (imc < 34.9) {
     percentual = 85;
     cor = "#fb8500";
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
     percentual = 100;
     cor = "#d90429";
     classificacao = "Obesidade Grau III";
-    mensagem = "A Consulta é urgente recomendada com acompanhamento multidisciplinar.";
+    mensagem = "A consulta é urgente recomendada com acompanhamento multidisciplinar.";
 }
 
 
@@ -145,5 +145,6 @@ function enviarWhatsAppFinal(event) {
     // Abre o WhatsApp em nova aba ou no app do celular
     window.open(urlWhats, '_blank');
 }
+
 
 
