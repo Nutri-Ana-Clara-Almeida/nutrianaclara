@@ -903,23 +903,25 @@ body, html {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .cta-mimosa p {
-        font-size: 0.9rem;
-        padding: 4px 12px;
-    }
-    .cta-mimosa a {
-        font-size: 0.8rem;
-        padding: 5px 15px;
+    .cta-mimosa {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
 
 @media (max-width: 480px) {
-    .cta-mimosa p {
-        font-size: 0.8rem;
-        padding: 3px 10px;
-    }
-    .cta-mimosa a {
-        font-size: 0.75rem;
-        padding: 4px 12px;
+    .cta-mimosa {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
