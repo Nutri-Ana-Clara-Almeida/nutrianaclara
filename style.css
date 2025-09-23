@@ -935,3 +935,12 @@ body, html {
         padding-bottom: 30px;  /* menor espaço inferior */
     }
 }
+
+/* ===== Chamada de ação apenas para celulares ===== */
+@media (max-width: 480px) {
+    .cta-mimosa {
+        margin-top: 5px;           /* diminui espaço acima */
+        transform: translateY(-10px); /* puxa levemente para cima */
+    }
+}
+
