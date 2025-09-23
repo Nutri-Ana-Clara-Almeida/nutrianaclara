@@ -155,12 +155,13 @@ p {
 /* ====== PERFIL WIDGET (DESKTOP) ====== */
 .perfil-widget {
     width: 100vw;
-    padding: 100px 0;
+    padding: 100px 0 50px 0;  /* reduz padding inferior para dar espaço */
     background: url("capa_01.jpg") no-repeat center top;
-    background-size: cover; /* desktop permanece igual */
+    background-size: cover;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;    /* importante: permite empilhar o container e a chamada */
+    justify-content: flex-start; 
+    align-items: center;       /* centraliza horizontalmente */
     position: relative;
     box-sizing: border-box;
     margin: 0;
@@ -175,11 +176,11 @@ p {
     gap: 60px;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;  /* centraliza o conteúdo horizontalmente */
     padding: 0 10px;
     margin: 0 auto;
     box-sizing: border-box;
 }
-
 /* ====== FOTO DO PERFIL ====== */
 .perfil-foto {
     flex-shrink: 0;
@@ -803,4 +804,122 @@ body, html {
 .estrelas span:hover {
     transform: scale(1.2);        /* cresce levemente ao passar o mouse */
     cursor: pointer;
+}
+
+/*botão flutuante whats*/
+
+  .whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+  }
+
+  .whatsapp-float img {
+    width: 35px;
+    height: 35px;
+    filter: brightness(0) invert(1);
+  }
+
+
+
+  /*Chamada de ação*/
+ * Chamada de ação mimosa centralizada */
+.perfil-widget {
+    width: 100vw;
+    padding: 100px 0 50px 0; 
+    background: url("capa_01.jpg") no-repeat center top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;    /* empilha container + chamada */
+    align-items: center;       /* centraliza tudo horizontalmente */
+    justify-content: flex-start;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+    min-height: 600px;
+}
+
+.perfil-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    gap: 60px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;  /* centraliza foto e texto */
+    padding: 0 10px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* CHAMADA DE AÇÃO */
+.cta-mimosa {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* centraliza */
+    gap: 8px;
+}
+
+.cta-mimosa p {
+    font-size: 1.2rem;
+    color: #fff;
+    background: rgba(0,0,0,0.25);
+    padding: 5px 15px;
+    border-radius: 12px;
+}
+
+.cta-mimosa a {
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: #2b6e44;
+    padding: 6px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-mimosa a:hover {
+    background-color: #1ebe5c;
+    transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cta-mimosa p {
+        font-size: 0.9rem;
+        padding: 4px 12px;
+    }
+    .cta-mimosa a {
+        font-size: 0.8rem;
+        padding: 5px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-mimosa p {
+        font-size: 0.8rem;
+        padding: 3px 10px;
+    }
+    .cta-mimosa a {
+        font-size: 0.75rem;
+        padding: 4px 12px;
+    }
 }
