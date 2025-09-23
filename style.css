@@ -880,8 +880,9 @@ body, html {
 
 .cta-mimosa p {
     font-size: 1.2rem;
-    color: #fff;
-    background: rgba(0,0,0,0.25);
+    color: #633414;
+    background: #633414 (0,0,0,0.25);
+    background-color: #FFF;
     padding: 5px 15px;
     border-radius: 12px;
 }
@@ -889,8 +890,8 @@ body, html {
 .cta-mimosa a {
     font-size: 0.9rem;
     color: #fff;
-    background-color: #2b6e44;
-    padding: 6px 18px;
+    background-color: #1fa04e;
+    padding: 10px 20px;
     border-radius: 50px;
     text-decoration: none;
     transition: all 0.3s ease;
