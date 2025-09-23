@@ -902,6 +902,7 @@ body, html {
     transform: translateY(-2px);
 }
 
+
 /* Responsividade */
 @media (max-width: 768px) {
     .cta-mimosa {
@@ -916,13 +917,21 @@ body, html {
 }
 
 @media (max-width: 480px) {
-    .cta-mimosa {
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    .cta-mimosa p {
+        font-size: 1rem;       /* menor fonte */
+        padding: 3px 10px;     /* menos espaço interno */
+        border-radius: 8px;    /* menos arredondado */
+    }
+
+    .cta-mimosa a {
+        font-size: 0.85rem;    /* menor botão */
+        padding: 6px 15px;     /* menor que no desktop */
+        border-radius: 25px;   /* mantém levemente arredondado */
+    }
+
+    /* Ajuste do posicionamento */
+    .perfil-widget {
+        padding-top: 70px;     /* puxa conteúdo um pouco para cima */
+        padding-bottom: 30px;  /* menor espaço inferior */
     }
 }
