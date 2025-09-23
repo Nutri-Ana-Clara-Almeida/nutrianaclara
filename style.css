@@ -928,18 +928,15 @@ body, html {
         padding: 6px 15px;     /* menor que no desktop */
         border-radius: 25px;   /* mantém levemente arredondado */
     }
-
-    /* Ajuste do posicionamento */
-    .perfil-widget {
-        padding-top: 70px;     /* puxa conteúdo um pouco para cima */
-        padding-bottom: 30px;  /* menor espaço inferior */
-    }
 }
-
-/* ===== Chamada de ação apenas para celulares ===== */
+/* ===== Ajustes apenas para celulares ===== */
 @media (max-width: 480px) {
+    .perfil-widget {
+        padding-top: 30px;   /* reduz o padding superior, trazendo o perfil mais para cima */
+        padding-bottom: 30px; /* reduz padding inferior também */
+    }
+
     .cta-mimosa {
-        margin-top: 20px;           /* espaço adequado abaixo do quadrinho */
-        transform: translateY(0);   /* remove deslocamento anterior */
+        margin-top: 15px;    /* afasta a CTA do quadrinho, mas sem ficar muito grudada */
     }
 }
