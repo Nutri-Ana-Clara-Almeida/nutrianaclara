@@ -1287,33 +1287,49 @@ body, html {
         justify-content: flex-start;
     }
 
-  @media (max-width: 768px) {
-    /* Espaçamento entre h2 e h3 da galeria/carrossel */
-    .galeria-carrossel-container h2 {
-        margin-bottom: 50px;  /* aumenta espaço entre h2 e h3 */
+@media (max-width: 768px) {
+    /* Container geral da galeria */
+    .paciente-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px; /* reduz espaço entre imagem, texto e bolinhas */
     }
 
-    .galeria-carrossel-container h3 {
-        margin-top: 0;         /* remove qualquer margem extra */
-        margin-bottom: 15px;   /* espaçamento para elementos abaixo */
-    }
-}
-
-    /* Imagens */
-    .paciente-imagens {
-        max-width: 90%;
+    /* Texto do paciente */
+    .paciente-texto {
+        margin-bottom: 0;       /* remove espaço extra abaixo do texto */
+        padding: 0 5px;         /* mantém alinhamento */
     }
 
-    .paciente-imagens img {
-        width: 100%;
-        height: auto;
+    /* Botão */
+    .btn-paciente {
+        margin-top: 5px;        /* aproxima do parágrafo */
     }
 
     /* Bolinhas */
     .bolinhas {
-        margin-top: 8px;
-        gap: 6px;
+        margin-top: 3px;        /* aproxima ainda mais do texto */
+        gap: 3px;
     }
+
+   @media (max-width: 768px) {
+    /* Diminui o tamanho das bolinhas */
+    .bolinhas .bolinha {
+        width: 8px;       /* menor que o padrão */
+        height: 8px;
+    }
+
+    /* Aproxima o texto das bolinhas */
+    .paciente-texto {
+        margin-bottom: 3px;   /* reduz espaço abaixo do texto */
+    }
+
+    .bolinhas {
+        margin-top: 3px;       /* aproxima bolinhas do texto */
+        gap: 4px;              /* mantém pequeno espaçamento entre bolinhas */
+    }
+}
+
 
     /* Botão menor e próximo da imagem */
     .btn-paciente {
@@ -1556,6 +1572,12 @@ body, html {
 * {
   box-sizing: border-box; /* evita que padding/margin quebrem o layout */
 }
+
+
+
+
+
+
 
 
 
