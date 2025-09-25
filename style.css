@@ -1272,6 +1272,10 @@ body, html {
 }
 
 /* ====== RESPONSIVIDADE PARA CELULAR ====== */
+
+
+/*-------------CARROSEL PACIENTES------------*/
+
 @media (max-width: 768px) {
     /* Paciente wrapper: texto em cima, imagem abaixo */
     .paciente-wrapper {
@@ -1280,56 +1284,40 @@ body, html {
         text-align: center;
         gap: 1.5rem;  /* reduz gap para aproximar imagem do botão */
     }
-}
+
     /* Texto */
     .paciente-texto {
         max-width: 90%;
         justify-content: flex-start;
     }
 
-@media (max-width: 768px) {
-    /* Container geral da galeria */
-    .paciente-wrapper {
-        flex-direction: column;
-        align-items: center;
-        gap: 5px; /* reduz espaço entre imagem, texto e bolinhas */
+  @media (max-width: 768px) {
+    /* Espaçamento entre h2 e h3 da galeria/carrossel */
+    .galeria-carrossel-container h2 {
+        margin-bottom: 50px;  /* aumenta espaço entre h2 e h3 */
     }
 
-    /* Texto do paciente */
-    .paciente-texto {
-        margin-bottom: 0;       /* remove espaço extra abaixo do texto */
-        padding: 0 5px;         /* mantém alinhamento */
+    .galeria-carrossel-container h3 {
+        margin-top: 0;         /* remove qualquer margem extra */
+        margin-bottom: 15px;   /* espaçamento para elementos abaixo */
+    }
+}
+
+    /* Imagens */
+    .paciente-imagens {
+        max-width: 90%;
     }
 
-    /* Botão */
-    .btn-paciente {
-        margin-top: 5px;        /* aproxima do parágrafo */
+    .paciente-imagens img {
+        width: 100%;
+        height: auto;
     }
 
     /* Bolinhas */
     .bolinhas {
-        margin-top: 3px;        /* aproxima ainda mais do texto */
-        gap: 3px;
+        margin-top: 8px;
+        gap: 6px;
     }
-
-   @media (max-width: 768px) {
-    /* Diminui o tamanho das bolinhas */
-    .bolinhas .bolinha {
-        width: 8px;       /* menor que o padrão */
-        height: 8px;
-    }
-
-    /* Aproxima o texto das bolinhas */
-    .paciente-texto {
-        margin-bottom: 3px;   /* reduz espaço abaixo do texto */
-    }
-
-    .bolinhas {
-        margin-top: 3px;       /* aproxima bolinhas do texto */
-        gap: 4px;              /* mantém pequeno espaçamento entre bolinhas */
-    }
-}
-
 
     /* Botão menor e próximo da imagem */
     .btn-paciente {
@@ -1346,7 +1334,7 @@ body, html {
 }
 
 
-/* ====== RESPONSIVIDADE ====== */
+/* ====== CARROSEL INFORMAÇÕES ====== */
 @media (max-width: 768px) {
   .carrossel-lado-a-lado {
     flex-direction: column-reverse;
@@ -1400,7 +1388,22 @@ body, html {
     }
     
 }
+/* Ajuste bolinhas douradas próximas ao texto no celular */
+@media (max-width: 768px) {
+    .lista-profissional li span {
+        width: 10px;        /* diminui o tamanho da bolinha */
+        height: 10px;
+        left: 0;            /* deixa mais próximo do início do texto */
+        transform: translateY(-50%);  /* centraliza verticalmente */
+    }
 
+    .lista-profissional li {
+        padding-left: 15px; /* ajusta o espaço entre bolinha e texto */
+    }
+}
+
+
+/*-----------------Feedbacks-----------------*/
 
 /* ====== Responsividade ====== */
 @media (max-width: 768px) {
