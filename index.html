@@ -7,39 +7,46 @@
 
 <title>Nutricionista Ana Clara Almeida</title>
 
-
 <!-- CSS -->
-<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 <div id="particles-js"></div>
 
-
 <!-- JS -->
-<script src="script.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
 
 <!-- ====== BARRA DE NAVEGAÇÃO ====== -->
-<header class="navbar">
-    <div class="logo"></div>
-    <nav class="nav-links">
-        <a href="#sobre">Sobre mim</a>
-        <a href="#formContatoFinal">Contato</a><!-- apontando para o formulário final -->
-    </nav>
-    
-    
-    <div class="social-icons">
-        <a href="https://wa.me/5521993111831" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://instagram.com/nutri.anaclaraalmeida" target="_blank"><i class="fab fa-instagram"></i></a>
+<nav class="navbar">
+  <div class="navbar-items">
+    <div class="nav-links">
+      <a href="#sobre">Sobre mim</a>
+      <a href="#formContatoFinal">Contato</a>
     </div>
-</header>
+    <div class="social-icons">
+      <a href="https://instagram.com/nutri.anaclaraalmeida" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://wa.me/5521993111831" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+</nav>
 
 
 <!-- ====== PERFIL PROFISSIONAL ====== -->
-<section class="perfil-widget">
+<section class="perfil-widget" data-aos="fade-up">
   <div class="perfil-container">
     <div class="perfil-texto">
       <h1><strong>Ana Clara Almeida</strong></h1>
@@ -53,126 +60,151 @@
     </div>
   </div>
 
-  <!-- CHAMADA DE AÇÃO MIMOSA CENTRALIZADA -->
   <div class="cta-mimosa">
     <p><strong>Quer transformar sua relação com a comida?</strong></p>
-  <a href="https://wa.me/5521993111831?text=Olá!%20Tenho%20interesse%20em%20transformar%20minha%20relação%20com%20a%20comida.%0APode%20me%20ajudar?" target="_blank"><strong> ➤ EU QUERO!</strong></a>
-
-
-
-
+    <a href="https://wa.me/5521993111831?text=Olá!%20Tenho%20interesse%20em%20transformar%20minha%20relação%20com%20a%20comida.%0APode%20me%20ajudar?" target="_blank"><strong> ➤ EU QUERO!</strong></a>
   </div>
 </section>
 
 <!-- ====== SOBRE MIM ====== -->
+<section class="quem-eu-sou" id="sobre" data-aos="fade-right">
+  <div class="quem-container">
+      <div class="quem-texto">
+          <h1>Sobre mim:</h1>
+          <p>Sou nutricionista formada pela Universidade Federal do Rio de Janeiro (UFRJ), com especializações em Nutrição Comportamental, Nutrição Estética e Nutrição Funcional. Ao longo da minha trajetória, desenvolvi um olhar humanizado e individualizado para cada paciente, entendendo que a alimentação vai muito além do que está no prato. Meu trabalho é guiado por uma abordagem que respeita sua história, seus hábitos e suas emoções promovendo mudanças sustentáveis e possíveis no dia a dia.</p>
+      </div>
+      <div class="quem-foto">
+          <img src="sobre_01.jpg" alt="sobre_01" loading="lazy">
+      </div>
+  </div>
+</section>
 
-
-<section class="quem-eu-sou" id="sobre">
-    <div class="quem-container">
-        <div class="quem-texto">
-            <h1>Sobre mim:</h1>
-            <p>Sou nutricionista formada pela Universidade Federal do Rio de Janeiro (UFRJ), com especializações em Nutrição Comportamental, Nutrição Estética e Nutrição Funcional. Ao longo da minha trajetória, desenvolvi um olhar humanizado e individualizado para cada paciente, entendendo que a alimentação vai muito além do que está no prato. Meu trabalho é guiado por uma abordagem que respeita sua história, seus hábitos e suas emoções promovendo mudanças sustentáveis e possíveis no dia a dia.</p>
-        </div>
-        <div class="quem-foto">
-            <img src="sobre_01.jpg" alt="sobre_01" loading="lazy">
-        </div>
-    </div>
 <!-- ====== DIVISÓRIA ====== -->
-<div class="divisoria-profissional">
+<div class="divisoria-profissional" data-aos="fade-up">
     <span class="decor"></span>
     <span class="decor"></span>
 </div>
 
-<!-- Conheça alguns pacientes com histórias marcantes -->
 <!-- ====== GALERIA DE PACIENTES ====== -->
-<div class="galeria-carrossel-container">
+<section class="galeria-carrossel-container" data-aos="fade-left">
   <h2 class="galeria-titulo">Conheça alguns pacientes com histórias marcantes</h2>
 
-  <div class="galeria-carrossel">
-
-    <!-- Carrossel 1 -->
-    <div class="carrossel-wrapper">
-      <div class="carrossel">
-        <div class="slides">
-          <div class="slide active"><img src="pacientes_01.jpg" alt="pacientes_01"></div>
-          <div class="slide"><img src="pacientes_02.jpg" alt="pacientes_02"></div>
-          <div class="slide"><img src="pacientes_03.jpg" alt="pacientes_03"></div>
-          <div class="slide"><img src="pacientes_04.jpg" alt="pacientes_04"></div>
-          <div class="slide"><img src="pacientes_05.jpg" alt="pacientes_05"></div>
-        </div>
-      </div>
-      <div class="bolinhas">
-        <span class="bolinha active" data-index="0"></span>
-        <span class="bolinha" data-index="1"></span>
-        <span class="bolinha" data-index="2"></span>
-        <span class="bolinha" data-index="3"></span>
-        <span class="bolinha" data-index="4"></span>
+  <!-- ====== Paciente Kelly ====== -->
+  <div class="paciente-wrapper">
+    <div class="paciente-texto">
+      <h3>História de Kelly</h3>
+      <p>Veja logo ao lado e se emocione com a trajetória dela e sua transformação com acompanhamento nutricional personalizado.</p>
+      <div class="btn-paciente-wrapper">
+          <a href="https://wa.me/5521993111831?text=Ol%C3%A1,%20quero%20transformar%20minha%20hist%C3%B3ria%20com%20voc%C3%AA." 
+   class="btn-paciente" target="_blank">
+   Quero transformar minha história
+</a>
+    </a>
       </div>
     </div>
 
-    <!-- Carrossel 2 -->
-    <div class="carrossel-wrapper">
-      <div class="carrossel">
-        <div class="slides">
-          <div class="slide active"><img src="monique_06.jpg" alt="pacientes_06"></div>
-          <div class="slide"><img src="monique_07.jpg" alt="pacientes_07"></div>
-          <div class="slide"><img src="monique_08.jpg" alt="pacientes_08"></div>
-          <div class="slide"><img src="monique_09.jpg" alt="pacientes_09"></div>
-          <div class="slide"><img src="monique_10.jpg" alt="pacientes_10"></div>
+    <div class="paciente-imagens">
+      <div class="carrossel-wrapper">
+        <div class="carrossel">
+          <div class="slides">
+            <div class="slide active"><img src="pacientes_01.jpg" alt="pacientes_01"></div>
+            <div class="slide"><img src="pacientes_02.jpg" alt="pacientes_02"></div>
+            <div class="slide"><img src="pacientes_03.jpg" alt="pacientes_03"></div>
+            <div class="slide"><img src="pacientes_04.jpg" alt="pacientes_04"></div>
+            <div class="slide"><img src="pacientes_05.jpg" alt="pacientes_05"></div>
+          </div>
+        </div>
+        <div class="bolinhas">
+          <span class="bolinha active" data-index="0"></span>
+          <span class="bolinha" data-index="1"></span>
+          <span class="bolinha" data-index="2"></span>
+          <span class="bolinha" data-index="3"></span>
+          <span class="bolinha" data-index="4"></span>
         </div>
       </div>
-      <div class="bolinhas">
-        <span class="bolinha active" data-index="0"></span>
-        <span class="bolinha" data-index="1"></span>
-        <span class="bolinha" data-index="2"></span>
-        <span class="bolinha" data-index="3"></span>
-        <span class="bolinha" data-index="4"></span>
-      </div>
     </div>
-
   </div>
-</div>
+
+  <!-- ====== Paciente Monique ====== -->
+  <div class="paciente-wrapper">
+    <div class="paciente-texto">
+      <h3>História de Monique</h3>
+      <p>Descubra como Monique alcançou seus objetivos de forma saudável e sustentável com nossas orientações.</p>
+      <div class="btn-paciente-wrapper">
+        <a href="https://wa.me/5521993111831?text=Ol%C3%A1,%20quero%20transformar%20minha%20hist%C3%B3ria%20com%20voc%C3%AA." 
+        class="btn-paciente" target="_blank">
+        Quero transformar minha história
+</a>
+    </a>
+      </div>
+    </div>
+
+    <div class="paciente-imagens">
+      <div class="carrossel-wrapper">
+        <div class="carrossel">
+          <div class="slides">
+            <div class="slide active"><img src="monique_06.jpg" alt="pacientes_06"></div>
+            <div class="slide"><img src="monique_07.jpg" alt="pacientes_07"></div>
+            <div class="slide"><img src="monique_08.jpg" alt="pacientes_08"></div>
+            <div class="slide"><img src="monique_09.jpg" alt="pacientes_09"></div>
+            <div class="slide"><img src="monique_10.jpg" alt="pacientes_10"></div>
+          </div>
+        </div>
+        <div class="bolinhas">
+          <span class="bolinha active" data-index="0"></span>
+          <span class="bolinha" data-index="1"></span>
+          <span class="bolinha" data-index="2"></span>
+          <span class="bolinha" data-index="3"></span>
+          <span class="bolinha" data-index="4"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
 <!-- ====== DIVISÓRIA ====== -->
-<div class="divisoria-profissional">
+<div class="divisoria-profissional" data-aos="fade-up">
     <span class="decor"></span>
     <span class="decor"></span>
 </div>
 
 <!-- ====== CALCULADORA DE IMC ====== -->
-
-<section class="calculadora-imc">
-    <h2>Como está o seu IMC (Índice de Massa Corporal)?</h2>
-    <div class="imc-widget">
-        <div class="imc-calculadora">
-            <form id="imcForm">
-                <label for="peso">Peso (kg):</label>
-                <input type="number" id="peso" placeholder="Ex: 70" required>
-
-                <label for="altura">Altura (m):</label>
-                <input type="number" id="altura" placeholder="Ex: 1.70" step="0.01" required>
-
-                <button type="submit">Calcular</button>
-            </form>
-        </div>
-
-        <div class="imc-resultado">
-            <div class="barra-container">
-                <div class="barra-progresso" id="barra-progresso"></div>
+<section class="secao-calculadora" data-aos="zoom-in">
+    <div class="container-calculadora">
+        <div class="calculadora-imc">
+            <h2>Como está o seu IMC (Índice de Massa Corporal)?</h2>
+            <div class="imc-widget">
+                <div class="imc-calculadora">
+                    <form id="imcForm">
+                        <label for="peso">Peso (kg):</label>
+                        <input type="number" id="peso" placeholder="Ex: 70" required>
+                        <label for="altura">Altura (m):</label>
+                        <input type="number" id="altura" placeholder="Ex: 1.70" step="0.01" required>
+                        <button type="submit">Calcular</button>
+                    </form>
+                </div>
+                <div class="imc-resultado">
+                    <div class="barra-container">
+                        <div class="barra-progresso" id="barra-progresso"></div>
+                    </div>
+                    <div class="mensagem" id="mensagem">Seu IMC aparecerá aqui!</div>
+                </div>
             </div>
-            <div class="mensagem" id="mensagem">Seu IMC aparecerá aqui!</div>
         </div>
     </div>
 </section>
 <!-- ====== DIVISÓRIA ====== -->
-<div class="divisoria-profissional">
+<div class="divisoria-profissional" data-aos="fade-up">
     <span class="decor"></span>
     <span class="decor"></span>
 </div>
 
 
-
 <!-- ====== DO QUE VOCÊ PRECISA ====== -->
-<section class="o-que-voce-precisa">
+<section class="o-que-voce-precisa" data-aos="fade-up">
     <h2>Do que você precisa?</h2>
     <div class="cards">
         <a href="pagina1.html" class="card">
@@ -187,22 +219,28 @@
         </a>
     </div>
 </section>
+
 <!-- ====== DIVISÓRIA ====== -->
-<div class="divisoria-profissional">
+<div class="divisoria-profissional" data-aos="fade-up">
     <span class="decor"></span>
     <span class="decor"></span>
 </div>
 
-
 <!-- ====== CARROSSEL 1: Conheça o meu trabalho ====== -->
-<section class="carrossel-container">
-  <div class="carrossel-conteudo">
+<section class="carrossel-container" data-aos="fade-right">
+  <div class="carrossel-lado-a-lado">
 
-    <!-- Texto acima do carrossel -->
-    <div class="carrossel-texto-superior">
-      <h2>Conheça o meu trabalho:</h2>
-     
-    <!-- Carrossel -->
+    <div class="texto-carrossel">
+      <h2>Conheça meu trabalho</h2>
+      <p>Oferecemos serviços personalizados que combinam atenção e tecnologia para o seu acompanhamento nutricional.</p>
+      <ul class="lista-profissional">
+        <li><span></span>Atendimento presencial, com foco no contato direto.</li>
+        <li><span></span>Acompanhamento online, prático e eficiente.</li>
+        <li><span></span>Planos alimentares personalizados para cada perfil.</li>
+      </ul>
+      <a href="https://wa.me/5521993111831?text=Olá! Gostaria de tirar minhas dúvidas." class="btn-destaque" target="_blank">💬 Tire suas dúvidas</a>
+    </div>
+
     <div class="carrossel-wrapper">
       <div class="carrossel">
         <div class="slides">
@@ -220,27 +258,31 @@
         <span class="bolinha" data-index="3"></span>
         <span class="bolinha" data-index="4"></span>
       </div>
-        <p>🌿 Atendemos presencialmente, para quem prefere o contato direto.</p>
-      <p>💻 Também oferecemos acompanhamento nutricional online.</p>
-      <p>🥗 Planos alimentares personalizados.</p>
     </div>
-    </div>
-    
-
 
   </div>
 </section>
-
 <!-- ====== CARROSSEL 2: Atendimento Online ====== -->
-<section class="carrossel-container">
-  <div class="carrossel-conteudo">
+<section class="carrossel-container" data-aos="fade-left">
+  <div class="carrossel-lado-a-lado">
 
-    <!-- Texto acima do carrossel -->
-    <div class="carrossel-texto-superior">
-      <h2>Atendimento Online:</h2>
-    
+    <div class="texto-carrossel">
+      <h2>Atendimento Online</h2>
+      <p>Para sua comodidade, oferecemos consultas online com o mesmo cuidado e atenção que no atendimento presencial. 
+         Receba acompanhamento nutricional personalizado sem sair de casa.</p>
 
-    <!-- Carrossel -->
+      <ul class="lista-profissional">
+        <li><span></span>Consultas práticas e seguras no conforto do seu lar.</li>
+        <li><span></span>Planos alimentares adaptados ao seu estilo de vida.</li>
+        <li><span></span>Suporte contínuo para alcançar seus objetivos.</li>
+      </ul>
+
+      <a href="https://wa.me/5521993111831?text=Olá! Gostaria de agendar minha consulta online." 
+         target="_blank" class="btn-destaque">
+        Agende sua consulta
+      </a>
+    </div>
+
     <div class="carrossel-wrapper">
       <div class="carrossel">
         <div class="slides">
@@ -250,6 +292,7 @@
           <div class="slide"><img src="carrosel_09.jpg" alt="Online 4"></div>
         </div>
       </div>
+
       <div class="bolinhas">
         <span class="bolinha active" data-index="0"></span>
         <span class="bolinha" data-index="1"></span>
@@ -261,20 +304,14 @@
   </div>
 </section>
 
-
-
-<!-- Importa o script -->
-<script src="script.js"></script>
-
 <!-- ====== DIVISÓRIA ====== -->
-<div class="divisoria-profissional">
+<div class="divisoria-profissional" data-aos="fade-up">
     <span class="decor"></span>
     <span class="decor"></span>
 </div>
 
-
-<!---Feedbacks-->
-<section class="feedbacks" id="feedbacks">
+<!-- ====== FEEDBACKS ====== -->
+<section class="feedbacks" id="feedbacks" data-aos="fade-up">
     <h2>Feedback dos nossos pacientes</h2>
     <p class="intro">Confira os relatos de pacientes que transformaram sua saúde e rotina com o acompanhamento nutricional.</p>
 
@@ -295,7 +332,6 @@
                 Graças a você, suas orientações e dieta eu estou conseguindo!
                 Estava tão desanimada e com a autoestima baixíssima, mas em tão pouco tempo eu já estou conseguindo ver resultados.
                 Me sinto mais disposta e confiante, agora sei que é possível! Obrigada! 💕</p>
-                
             </div>
         </div>
 
@@ -312,7 +348,6 @@
                 </div>
                 <p>Eu sempre tive muita dificuldade de conseguir comer assim que acordava. Agora, estou conseguindo comer e não sinto aquela sensação de peso ou mal estar. Pode parecer pequeno, mas é uma vitória imensa pra mim. E ver que estou conseguindo ter resultados tem me deixado extremamente feliz.
                 Obrigada por seu trabalho maravilhoso, e por estar comigo nessa!</p>
-               
             </div>
         </div>
 
@@ -328,22 +363,14 @@
                     <span>&#9733;</span>
                 </div>
                 <p>Tenho 68 anos, tenho diabetes e gastrite. Com a Dra Ana consegui perder 10kg de forma saudável. Meus exames melhoraram muito: colesterol, glicemia e voltaram para os valores normais. Hoje me sinto mais disposta, com mais energia para aproveitar a vida e cuidar da minha saúde.</p>
-              
             </div>
         </div>
 
     </div>
 </section>
 
-
-        
-
-    </div>
-</section>
-
-
-  <!-- FORMULÁRIO CENTRALIZADO -->
-  <div class="form-wrapper">
+<!-- ====== FORMULÁRIO CENTRALIZADO ====== -->
+<div class="form-wrapper" data-aos="zoom-in">
     <div class="form-container-final">
       <h2>Entre em contato conosco</h2>
       <form id="formContatoFinal" onsubmit="enviarWhatsAppFinal(event)">
@@ -380,26 +407,23 @@
         </div>
       </form>
     </div>
-  </div>
+</div>
 
-  
-<!-- Botão flutuante do WhatsApp com mensagem automática -->
+<!-- ====== BOTÃO FLUTUANTE WHATSAPP ====== -->
 <a href="https://wa.me/5521993111831?text=Olá,%20pode%20me%20ajudar?" class="whatsapp-float" target="_blank">
   <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
 </a>
 
-<!-- RODAPÉ -->
-  <footer class="rodape">
-    <div class="rodape-container">
-      <div class="rodape-nomes">
-        <span class="assinatura">Desenvolvido por Jeniffer Carvalho</span>
-        <span class="profissional">Ana Clara Almeida</span>
-      </div>
-      <p class="rodape-direitos">© 2025 Todos os direitos reservados</p>
-    </div>
-  </footer>
+<!-- ====== RODAPÉ SIMPLES ====== -->
+<footer class="rodape-simples" data-aos="fade-up">
+  <p> © 2025 Todos os direitos reservados | Ana Clara Almeida | Desenvolvido por Jeniffer Carvalho </p>
+</footer>
 
-
+<!-- ====== SCRIPT ====== -->
+<script src="script.js"></script>
 
 </body>
 </html>
+
+
+
