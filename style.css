@@ -1388,17 +1388,29 @@ body, html {
     }
     
 }
-/* Ajuste bolinhas douradas próximas ao texto no celular */
+/* ====== Lista profissional - bolinhas douradas ====== */
 @media (max-width: 768px) {
-    .lista-profissional li span {
-        width: 10px;        /* diminui o tamanho da bolinha */
-        height: 10px;
-        left: 0;            /* deixa mais próximo do início do texto */
-        transform: translateY(-50%);  /* centraliza verticalmente */
+    .lista-profissional {
+        padding-left: 15px; /* dá um pequeno respiro da borda */
     }
 
     .lista-profissional li {
-        padding-left: 15px; /* ajusta o espaço entre bolinha e texto */
+        display: flex;          
+        align-items: center;    
+        gap: 6px;               /* espaço entre bolinha e texto */
+        padding-left: 0;        
+        flex-wrap: nowrap;      /* impede quebra */
+        font-size: 0.95rem;     
+        text-align: left;       /* garante alinhamento à esquerda */
+    }
+
+    .lista-profissional li span {
+        width: 8px;             
+        height: 8px;
+        border-radius: 50%;
+        background-color: gold;
+        flex-shrink: 0;         /* bolinha não encolhe */
+        margin-left: 0;         /* encosta totalmente à esquerda */
     }
 }
 
