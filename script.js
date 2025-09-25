@@ -146,6 +146,10 @@ function enviarWhatsAppFinal(event) {
     window.open(urlWhats, '_blank');
 }
 
-
-
+AOS.init({
+  duration: 1000,    // duração da animação
+  once: true,         // animação acontece apenas uma vez
+  mirror: false,      // não repete animação ao rolar para cima
+ 
+});
 
