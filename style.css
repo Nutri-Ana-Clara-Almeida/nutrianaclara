@@ -1388,32 +1388,28 @@ body, html {
     }
     
 }
-/* ====== Lista profissional - bolinhas douradas ====== */
+/* ====== Lista profissional - bolinhas alinhadas ====== */
 @media (max-width: 768px) {
-    .lista-profissional {
-        padding-left: 15px; /* dá um pequeno respiro da borda */
-    }
-
     .lista-profissional li {
-        display: flex;          
-        align-items: center;    
-        gap: 6px;               /* espaço entre bolinha e texto */
-        padding-left: 0;        
-        flex-wrap: nowrap;      /* impede quebra */
-        font-size: 0.95rem;     
-        text-align: left;       /* garante alinhamento à esquerda */
+        display: flex;
+        align-items: center;   /* centraliza verticalmente bolinha + texto */
+        gap: 6px;              /* controla distância entre bolinha e texto */
+        font-size: 0.95rem;
+        line-height: 1.4;      /* mantém altura de linha equilibrada */
+        padding-left: 0;
+        text-align: left;
+        flex-wrap: nowrap;     /* evita quebra de linha estranha */
     }
 
     .lista-profissional li span {
-        width: 8px;             
+        width: 8px;
         height: 8px;
         border-radius: 50%;
         background-color: gold;
-        flex-shrink: 0;         /* bolinha não encolhe */
-        margin-left: 0;         /* encosta totalmente à esquerda */
+        flex-shrink: 0;        /* bolinha não encolhe */
+        display: inline-block; /* garante alinhamento */
     }
 }
-
 
 /*-----------------Feedbacks-----------------*/
 
