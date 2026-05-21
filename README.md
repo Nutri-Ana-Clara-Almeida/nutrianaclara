@@ -4,4 +4,5 @@ Projeto de site institucional na área de nutrição e saúde.
 
 🌐 Acesse o site:  
 
-Nutri-Ana-Clara-Almeida/nutrianaclara
+https://nutri-ana-clara-almeida.github.io/nutrianaclara/
+
